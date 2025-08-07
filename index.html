@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owsho - Everything Near By</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="navbar animate-slide-down">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Owsho Logo" />
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <a href="assets/About OwshoMarketPlace.pdf" target="_blank">
+          <button class="highlight-btn">Why Choose Owsho?</button>
+        </a>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+      </div>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#vendor">Vendor Onboarding</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section with Background -->
+    <section class="hero animate-fade-up">
+      <div class="hero-background">
+        <div class="hero-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="animate-text">
+            Discover a smarter<br /><span>way to shop local!</span>
+          </h1>
+          <p class="animate-fade-delay">
+            From Groceries to Book Services — Anything, Anywhere!
+          </p>
+          <h4 class="animate-fade-delay">
+            Everything Nearby, Delivered in Minutes!
+          </h4>
+
+          <div class="cta-buttons animate-fade-delay">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.app.cityshow&pcampaignid=web_share"
+            >
+              <img
+                src="assets/google-play-badge.png"
+                alt="Get it on Google Play"
+                class="badge google-badge"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.app.cityshow&pcampaignid=web_share"
+            >
+              <img
+                src="assets/app-store-badge.png"
+                alt="Download on the App Store"
+                class="badge apple-badge"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-phone-mockup">
+            <img
+              src="assets/E-commerce Workshop.png"
+              alt="Shopping App Interface"
+              class="hero-app-screen"
+            />
+          </div>
+          <div class="floating-elements">
+            <div class="floating-card delivery">
+              <i class="fas fa-shipping-fast"></i>
+              <span>In Min Delivery</span>
+            </div>
+            <div class="floating-card shops">
+              <i class="fas fa-store"></i>
+              <span>5000+ Shops</span>
+            </div>
+            <div class="floating-card services">
+              <i class="fas fa-tools"></i>
+              <span>Product and Services</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-number" data-count="15000">0</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fas fa-store"></i>
+            </div>
+            <div class="stat-number" data-count="5000">0</div>
+            <div class="stat-label">Partner Stores</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-label">Min Avg Delivery</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fas fa-city"></i>
+            </div>
+            <div class="stat-number" data-count="2">0</div>
+            <div class="stat-label">Cities Covered</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section with Images -->
+    <section class="about-owsho-section" id="about">
+      <div class="about-owsho-container">
+        <div class="about-owsho-content">
+          <div class="about-owsho-text">
+            <h2>About Owsho</h2>
+            <h3>
+              India's First <span>Hyperlocal Multi-Vendor Marketplace</span>
+            </h3>
+            <br />
+            <p>
+              <strong
+                >Owsho is India's first Zero-Commision Based hyperlocal
+                multi-vendor marketplace</strong
+              >
+              that connects nearby customers with local businesses and service
+              providers – all in one app. From daily essentials and groceries to
+              electronics, fashion, and home services, Owsho brings everything
+              from nearby shops to your doorstep in just minutes.
+            </p>
+            <p>
+              We
+              <strong>empower local shops and service professionals</strong> to
+              go digital, grow their business, and reach more customers
+              <strong>without any commission cut</strong>. We connect your
+              neighborhood stores and service experts directly with customers.
+              Our platform is designed to help every vendor – small or big –
+              sell products and services both within the city (quick delivery)
+              and across India (e-commerce model).
+            </p>
+            <p>
+              Whether you're a vendor looking to grow online, or a customer
+              seeking instant, reliable, and your offline market online shopping
+              – <strong>Owsho is your go-to solution</strong>.
+            </p>
+            <div class="mission-statement">
+              <p>
+                <strong
+                  >Owsho isn't just a marketplace — it's a movement.</strong
+                >
+              </p>
+              <p>
+                We're on a mission to bring India's
+                <strong>1 crore+ offline shops online</strong> — with speed,
+                dignity, and complete ownership.
+              </p>
+            </div>
+            <p class="tagline">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe5Cjii3olh4m50jBA7Qr7nVUgMoEDBo9DgjUFtXnDDQAyeEQ/viewform?usp=dialog"
+                class="highlight-link"
+                >Join us</a
+              >
+              — and be part of India's retail shop digitally.
+            </p>
+          </div>
+          <div class="about-owsho-image">
+            <div class="about-image-grid">
+              <div class="about-main-image">
+                <img
+                  src="assets/empower-local.png"
+                  alt="Local Shop Owner"
+                  class="main-img"
+                />
+                <div class="image-overlay">
+                  <div class="overlay-content">
+                    <i class="fas fa-handshake"></i>
+                    <span>Empowering Local Business</span>
+                  </div>
+                </div>
+              </div>
+              <div class="about-small-images">
+                <div class="small-img-container">
+                  <img
+                    src="assets/digital-growth.jpg"
+                    alt="Digital Marketplace"
+                  />
+                  <div class="small-overlay">Digital Growth</div>
+                </div>
+                <div class="small-img-container">
+                  <img src="assets/quick-delivery.jpg" alt="Fast Delivery" />
+                  <div class="small-overlay">Quick Delivery</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced App Showcase Section -->
+    <section class="app-showcase-section">
+      <div class="showcase-container">
+        <div class="showcase-content">
+          <div class="showcase-text">
+            <h2>Experience the Future of Local Shopping</h2>
+            <p>
+              Our cutting-edge mobile app brings thousands of local vendors to
+              your fingertips. Shop from your favorite neighborhood stores with
+              just a few taps.
+            </p>
+            <div class="feature-highlights">
+              <div class="feature-highlight">
+                <i class="fas fa-mobile-alt"></i>
+                <span>User-Friendly Interface</span>
+              </div>
+              <div class="feature-highlight">
+                <i class="fas fa-search-location"></i>
+                <span>Smart Location-Based Discovery</span>
+              </div>
+              <div class="feature-highlight">
+                <i class="fas fa-bolt"></i>
+                <span>Lightning-Fast Checkout</span>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-phones">
+            <div class="phone-mockup phone-1">
+              <img src="assets/screenshot1.jpeg" alt="Home Screen" />
+              <div class="phone-features">
+                <div
+                  class="feature-dot"
+                  data-feature="Browse Local Stores"
+                ></div>
+              </div>
+            </div>
+            <div class="phone-mockup phone-2 featured">
+              <img src="assets/screenshot2.jpeg" alt="Shop Interface" />
+              <div class="phone-glow"></div>
+            </div>
+            <div class="phone-mockup phone-3">
+              <img src="assets/screenshot3.jpeg" alt="Checkout Process" />
+              <div class="phone-features">
+                <div class="feature-dot" data-feature="Quick Checkout"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-background">
+          <div class="bg-shape shape-1"></div>
+          <div class="bg-shape shape-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section with Images -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="container">
+        <h2>How Owsho Works</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-image">
+              <img src="assets/Local.jpeg" alt="Local Shops" />
+              <div class="step-number">1</div>
+            </div>
+            <div class="step-content">
+              <h3>Explore Trusted Local Shops & Services</h3>
+              <p>
+                From groceries and electronics to AC repair and salon bookings —
+                discover 1000s of verified vendors near you. All available on
+                one powerful platform.
+              </p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-image">
+              <img src="assets/del.jpeg" alt="Mobile Ordering" />
+              <div class="step-number">2</div>
+            </div>
+            <div class="step-content">
+              <h3>Place Your Order in Minutes</h3>
+              <p>
+                Choose your products or book a service, select your preferred
+                time, and place the order — all in just a few taps. No hassle,
+                no waiting.
+              </p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-image">
+              <img src="assets/Neigh.jpeg" alt="Fast Delivery" />
+              <div class="step-number">3</div>
+            </div>
+            <div class="step-content">
+              <h3>Superfast Delivery from Your Neighbourhood</h3>
+              <p>
+                Our dedicated delivery fleet picks up your order directly from
+                nearby vendors and delivers it to your doorstep in just minutes.
+              </p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-image">
+              <img src="assets/Real.jpeg" />
+              <div class="step-number">4</div>
+            </div>
+            <div class="step-content">
+              <h3>Real-Time Tracking & Reliable Support</h3>
+              <p>
+                Get live updates, instant support, and full transparency at
+                every step. Owsho ensures a smooth, secure, and satisfying
+                experience — every single time.
+              </p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-image">
+              <img src="assets/Local.jpeg" alt="Local Shops" />
+              <div class="step-number">5</div>
+            </div>
+            <div class="step-content">
+              <h3>Explore Trusted Local Shops & Services</h3>
+              <p>
+                From groceries and electronics to AC repair and salon bookings —
+                discover 1000s of verified vendors near you. All available on
+                one powerful platform.
+              </p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-image">
+              <img src="assets/Local.jpeg" alt="Local Shops" />
+              <div class="step-number">6</div>
+            </div>
+            <div class="step-content">
+              <h3>Explore Trusted Local Shops & Services</h3>
+              <p>
+                From groceries and electronics to AC repair and salon bookings —
+                discover 1000s of verified vendors near you. All available on
+                one powerful platform.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Services Section -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <h2>Our Services</h2>
+
+        <!-- For Vendors Section -->
+        <div class="service-category">
+          <div class="category-header">
+            <div class="category-image">
+              <img src="assets/vendor.jpeg" alt="Vendor Success" />
+            </div>
+            <div class="category-text">
+              <h3 class="category-title">
+                For Vendors – Grow Your Business with Confidence
+              </h3>
+              <p>
+                Transform your traditional business into a digital powerhouse
+                with our comprehensive vendor solutions.
+              </p>
+            </div>
+          </div>
+          <div class="services-grid vendor-services">
+            <div class="service-card vendor-card">
+              <div class="service-image">
+                <img src="assets/Easy.png" alt="Easy Setup" />
+              </div>
+              <div class="service-content">
+                <h4>Easy Onboarding & Setup</h4>
+                <p>
+                  Get your shop online in minutes with dedicated support from
+                  our onboarding team — no tech skills required.
+                </p>
+              </div>
+            </div>
+            <div class="service-card vendor-card">
+              <div class="service-image">
+                <img src="assets/zero.jpg" alt="Zero Commission" />
+              </div>
+              <div class="service-content">
+                <h4>Zero Commission. 100% Profit</h4>
+                <p>
+                  We charge zero commission. Keep 100% of what you earn with our
+                  affordable subscription plans.
+                </p>
+              </div>
+            </div>
+            <div class="service-card vendor-card">
+              <div class="service-image">
+                <img src="assets/zero.jpg" alt="Zero Commission" />
+              </div>
+              <div class="service-content">
+                <h4>Zero Commission. 100% Profit</h4>
+                <p>
+                  We charge zero commission. Keep 100% of what you earn with our
+                  affordable subscription plans.
+                </p>
+              </div>
+            </div>
+            <div class="service-card vendor-card">
+              <div class="service-image">
+                <img src="assets/zero.jpg" alt="Zero Commission" />
+              </div>
+              <div class="service-content">
+                <h4>Zero Commission. 100% Profit</h4>
+                <p>
+                  We charge zero commission. Keep 100% of what you earn with our
+                  affordable subscription plans.
+                </p>
+              </div>
+            </div>
+            <div class="service-card vendor-card">
+              <div class="service-image">
+                <img src="assets/Marketing.jpg" alt="Marketing Tools" />
+              </div>
+              <div class="service-content">
+                <h4>Powerful Marketing Tools</h4>
+                <p>
+                  Run offers, discounts, and feature products through built-in
+                  promotional tools designed to increase visibility and sales.
+                </p>
+              </div>
+            </div>
+            <div class="service-card vendor-card">
+              <div class="service-image">
+                <img
+                  src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=300"
+                  alt="Analytics Dashboard"
+                />
+              </div>
+              <div class="service-content">
+                <h4>Real-Time Analytics Dashboard</h4>
+                <p>
+                  Track orders, inventory, customer trends, and performance
+                  metrics from one smart dashboard.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- For Customers Section -->
+        <div class="service-category">
+          <div class="category-header">
+            <div class="category-image">
+              <img src="assets/Customer.jpg" alt="Customer Experience" />
+            </div>
+            <div class="category-text">
+              <h3 class="category-title">
+                For Customers – Shop Smart, Shop Fast
+              </h3>
+              <p>
+                Experience the convenience of hyperlocal shopping with our
+                customer-centric features.
+              </p>
+            </div>
+          </div>
+          <div class="services-grid customer-services">
+            <div class="service-card customer-card">
+              <div class="service-image">
+                <img src="assets/in.jpg" alt="Fast Delivery" />
+              </div>
+              <div class="service-content">
+                <h4>In-Minute Hyperlocal Delivery</h4>
+                <p>
+                  Get products from nearby shops delivered in minutes —
+                  groceries, essentials, and more.
+                </p>
+              </div>
+            </div>
+            <div class="service-card customer-card">
+              <div class="service-image">
+                <img src="assets/COD.jpg" alt="Payment Options" />
+              </div>
+              <div class="service-content">
+                <h4>Pay on Delivery Options</h4>
+                <p>
+                  Choose from multiple payment methods including Cash on
+                  Delivery and Online Payment.
+                </p>
+              </div>
+            </div>
+            <div class="service-card customer-card">
+              <div class="service-image">
+                <img src="assets/COD.jpg" alt="Payment Options" />
+              </div>
+              <div class="service-content">
+                <h4>Pay on Delivery Options</h4>
+                <p>
+                  Choose from multiple payment methods including Cash on
+                  Delivery and Online Payment.
+                </p>
+              </div>
+            </div>
+            <div class="service-card customer-card">
+              <div class="service-image">
+                <img src="assets/COD.jpg" alt="Payment Options" />
+              </div>
+              <div class="service-content">
+                <h4>Pay on Delivery Options</h4>
+                <p>
+                  Choose from multiple payment methods including Cash on
+                  Delivery and Online Payment.
+                </p>
+              </div>
+            </div>
+            <div class="service-card customer-card">
+              <div class="service-image">
+                <img src="assets/LOcation.jpg" alt="Location Discovery" />
+              </div>
+              <div class="service-content">
+                <h4>Location-Based Discovery</h4>
+                <p>
+                  Find nearby shops and services easily, making your shopping
+                  local, quick, and trusted.
+                </p>
+              </div>
+            </div>
+            <div class="service-card customer-card">
+              <div class="service-image">
+                <img src="assets/Review.jpg" alt="Reviews and Ratings" />
+              </div>
+              <div class="service-content">
+                <h4>Trusted Reviews & Ratings</h4>
+                <p>
+                  Make informed choices with verified customer reviews on every
+                  product and service.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Owsho Section -->
+        <div class="why-owsho-section">
+          <h3 class="why-title">Why Owsho?</h3>
+          <div class="why-content">
+            <p>
+              From kirana stores to repair services, Owsho brings local
+              businesses online delivered in city & across India.
+            </p>
+            <p>
+              For vendors, it's a zero-commission platform built for visibility
+              and growth.
+            </p>
+            <p>For customers, it's the fastest way to shop local, online.</p>
+            <p class="tagline-bottom">
+              <strong>One platform. One mission. One Bharat.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Owsho has completely changed how I shop! Getting groceries
+                delivered in 15 minutes is incredible. The local stores are
+                amazing too!"
+              </p>
+              <div class="customer-info">
+                <img
+                  src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100"
+                  alt="Sarah Johnson"
+                />
+                <div>
+                  <h4>Shivani Thakkar, Deesa</h4>
+                  <span>Regular Customer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "As a small business owner, Owsho helped me reach more
+                customers. The platform is user-friendly and the support team is
+                excellent!"
+              </p>
+              <div class="customer-info">
+                <img
+                  src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100"
+                  alt="Mike Chen"
+                />
+                <div>
+                  <h4>TirthBhai Mali</h4>
+                  <span>Shivgar Kirana</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Owsho is unique platform that brings fashion,electronics, and
+                more from Nearby local stores in city,ensuring fast delivery and
+                supporting local business."
+              </p>
+              <div class="customer-info">
+                <img
+                  src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100"
+                  alt="Mike Chen"
+                />
+                <div>
+                  <h4>Luhar Ramesh</h4>
+                  <span>Palanpur</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "The home services feature is a game-changer! Booked a cleaning
+                service and they arrived exactly on time. Highly recommended!"
+              </p>
+              <div class="customer-info">
+                <img
+                  src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100"
+                  alt="Emily Davis"
+                />
+                <div>
+                  <h4>Bhavesh Sundesha</h4>
+                  <span>Malgadh</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vendor Onboarding Section -->
+    <section class="vendor-section" id="vendor">
+      <div class="container">
+        <div class="vendor-content">
+          <div class="vendor-text">
+            <h2>Join Owsho as a Vendor</h2>
+            <h3>Grow Your Business with Us</h3>
+            <p>
+              Connect with thousands of local customers and expand your reach.
+              Our platform provides everything you need to succeed in the
+              digital marketplace.
+            </p>
+            <ul class="vendor-benefits">
+              <li><i class="fas fa-check"></i> Easy setup and onboarding</li>
+              <li><i class="fas fa-check"></i> Real-time order management</li>
+              <li><i class="fas fa-check"></i> Secure payment processing</li>
+              <li>
+                <i class="fas fa-check"></i> Marketing and promotional tools
+              </li>
+              <li><i class="fas fa-check"></i> 24/7 customer support</li>
+            </ul>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe5Cjii3olh4m50jBA7Qr7nVUgMoEDBo9DgjUFtXnDDQAyeEQ/viewform?usp=dialog"
+              target="_blank"
+            >
+              <button class="vendor-btn">Become a Vendor</button>
+            </a>
+          </div>
+          <div class="vendor-image">
+            <img
+              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Vendor Success"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Address</h4>
+                <p>
+                  <a
+                    href="https://www.google.com/maps/place/7A+Nilkanth+Arched,+Deesa,+Gujarat+385535"
+                    target="_blank"
+                    style="text-decoration: none; color: inherit"
+                  >
+                    7A Nilkanth Arched, 2nd Floor, Palanpur Highway,<br />Deesa,
+                    Gujarat, India, 385535
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>
+                  <a
+                    href="tel:+918200877397"
+                    style="text-decoration: none; color: inherit"
+                    >+91 8200877397</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>
+                  <a
+                    href="mailto:owshomarketplace@gmail.com"
+                    style="text-decoration: none; color: inherit"
+                    >owshomarketplace@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <form action="contact.php" method="POST">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+              <br /><br />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
+              <br /><br />
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img src="assets/logo1.png" alt="Owsho Logo" />
+            </a>
+            <p>
+              Redefining how you shop locally. Everything nearby, delivered in
+              minutes!
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#vendor">Become a Vendor</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Download App</h4>
+          <div class="app-badges">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.app.cityshow&pcampaignid=web_share"
+            >
+              <img
+                src="assets/google-play-badge.png"
+                alt="Get it on Google Play"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.app.cityshow&pcampaignid=web_share"
+            >
+              <img
+                src="assets/app-store-badge.png"
+                alt="Download on App Store"
+              />
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1FipUpk4sq/?mibextid=wwXIfr"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/owshomarketplace?igsh=ZjFxamVzMWJobTI0"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/owshomarketplace?igsh=ZjFxamVzMWJobTI0"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/company/owhso-marketplace/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Owsho Marketplace Pvt Ltd. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Newsletter Popup -->
+    <div class="newsletter-popup" id="newsletter-popup">
+      <div class="popup-content">
+        <span class="close-btn" id="close-popup">&times;</span>
+        <img src="assets/logo1.png" class="popup-logo" alt="Logo" />
+        <h3>SUBSCRIBE TO NEWSLETTER</h3>
+        <p>
+          Subscribe to the mailing list to receive updates on new arrivals,
+          special offers, and promotions.
+        </p>
+        <form class="popup-form">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit">SUBMIT</button>
+        </form>
+        <label
+          ><input type="checkbox" id="dont-show-again" /> Don't show this popup
+          again</label
+        >
+      </div>
+    </div>
+  </body>
+</html>
