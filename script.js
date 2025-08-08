@@ -542,17 +542,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, 3000);
 });
-
-
-
-// Console log for debugging
-console.log('🚀 Owsho professional website JavaScript loaded successfully!');
-console.log('💼 Professional features initialized:');
-console.log('   ✅ Animated counters');
-console.log('   ✅ Parallax effects');
-console.log('   ✅ Intersection observers');
-console.log('   ✅ Enhanced scroll animations');
-console.log('   ✅ Ripple effects');
-console.log('   ✅ Progressive image loading');
-console.log('   ✅ Mouse movement parallax');
-console.log('   ✅ Performance optimizations');
