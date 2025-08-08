@@ -78,7 +78,8 @@ html {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: auto;
+    right: 100%;
     background: rgba(8, 113, 189, 0.95);
     width: max-content;
     padding: 1rem 2rem;
