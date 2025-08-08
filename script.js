@@ -483,6 +483,68 @@ document.addEventListener('visibilitychange', () => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector('.vendor-services');
+    const cards = document.querySelectorAll('.vendor-services .service-card');
+    let index = 0;
+    const cardsPerView = 3;
+
+    // Clone cards for infinite loop
+    cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        container.appendChild(clone);
+    });
+
+    setInterval(() => {
+        index++;
+        container.style.transform = `translateX(-${index * (100 / cardsPerView)}%)`;
+
+        // Reset for infinite loop
+        if (index >= cards.length) {
+            setTimeout(() => {
+                container.style.transition = 'none';
+                index = 0;
+                container.style.transform = `translateX(0)`;
+                setTimeout(() => {
+                    container.style.transition = 'transform 0.5s ease';
+                });
+            }, 500);
+        }
+    }, 3000);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const customerContainer = document.querySelector('.customer-services');
+    const customerCards = document.querySelectorAll('.customer-services .service-card');
+    let cIndex = 0;
+    const cardsPerView = 3;
+
+    // Clone cards for infinite loop
+    customerCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        customerContainer.appendChild(clone);
+    });
+
+    setInterval(() => {
+        cIndex++;
+        customerContainer.style.transform = `translateX(-${cIndex * (100 / cardsPerView)}%)`;
+
+        // Reset for infinite loop
+        if (cIndex >= customerCards.length) {
+            setTimeout(() => {
+                customerContainer.style.transition = 'none';
+                cIndex = 0;
+                customerContainer.style.transform = `translateX(0)`;
+                setTimeout(() => {
+                    customerContainer.style.transition = 'transform 0.5s ease';
+                });
+            }, 500);
+        }
+    }, 3000);
+});
+
+
+
 // Console log for debugging
 console.log('🚀 Owsho professional website JavaScript loaded successfully!');
 console.log('💼 Professional features initialized:');

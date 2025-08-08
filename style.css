@@ -78,8 +78,7 @@ html {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: auto;
-    right: 100%;
+    right: 0;
     background: rgba(8, 113, 189, 0.95);
     width: max-content;
     padding: 1rem 2rem;
@@ -100,7 +99,7 @@ html {
     padding: 0.8rem 0;
     font-size: 1.2rem;
     font-weight: 600;
-    text-align: right;
+    text-align: left;
     pointer-events: auto;
 }
 
@@ -949,13 +948,56 @@ html {
     gap: 2rem;
 }
 
+.vendor-services-wrapper {
+    overflow: hidden; /* scrollbar ka kaam khatam */
+    width: 100%;
+    position: relative;
+}
+
 .vendor-services {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease;
+}
+
+/* Scrollbar hide for Chrome, Safari */
+.vendor-services::-webkit-scrollbar {
+    display: none;
+}
+/* Scrollbar hide for Firefox */
+.vendor-services {
+    scrollbar-width: none;
+}
+.vendor-services .service-card {
+    flex: 0 0 calc(33.333% - 1.4rem); /* 3 cards ek view me */
+}
+
+
+.customer-services-wrapper {
+    overflow: hidden; /* scrollbar हटाने के लिए */
+    width: 100%;
+    position: relative;
 }
 
 .customer-services {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease;
 }
+
+/* Scrollbar hide for Chrome, Safari */
+.customer-services::-webkit-scrollbar {
+    display: none;
+}
+/* Scrollbar hide for Firefox */
+.customer-services {
+    scrollbar-width: none;
+}
+
+.customer-services .service-card {
+    flex: 0 0 calc(33.333% - 1.4rem); /* एक बार में 3 कार्ड */
+}
+
 
 .service-card {
     background: white;
