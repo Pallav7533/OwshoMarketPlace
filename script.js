@@ -542,3 +542,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, 3000);
 });
+const testimonialContainer = document.querySelector('.testimonials-grid');
+let scrollAmount = 0;
+
+setInterval(() => {
+    const cardWidth = testimonialContainer.querySelector('.testimonial-card').offsetWidth + 32; // 32 = gap
+    if (scrollAmount >= testimonialContainer.scrollWidth - testimonialContainer.clientWidth) {
+        scrollAmount = 0; // reset to start
+    } else {
+        scrollAmount += cardWidth;
+    }
+    testimonialContainer.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}, 3000); // auto-slide every 3 sec
