@@ -285,7 +285,7 @@ html {
 .floating-card {
     position: absolute;
     background: rgba(255, 255, 255, 0.95);
-    color: #0871bd;
+    color: #064d8c;
     padding: 15px 20px;
     border-radius: 15px;
     display: flex;
@@ -482,13 +482,13 @@ html {
 
 .highlight-link {
     font-weight: bold;
-    color: #007BFF;
+    color: #064d8c;
     text-decoration: none;
 }
 
 .highlight-link:hover {
     text-decoration: underline;
-    color: #0056b3;
+    color: #fba208;
 }
 
 /* About Image Grid */
@@ -1860,7 +1860,7 @@ img.loaded {
     }
 
     .hero-image {
-        order: -1;
+        order: -3;
     }
 
     .hero-phone-mockup {
