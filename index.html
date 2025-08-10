@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Owsho - Everything Near By</title>
+    <title>Owsho - Everything Near By Delivered in minutes</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -26,19 +26,26 @@
 
       <div class="nav-right">
         <a href="assets/About OwshoMarketPlace.pdf" target="_blank">
-          <button class="highlight-btn">Why Choose Owsho?</button>
+          <button class="highlight-btn">
+            <i class="fas fa-star"></i>
+            Why Choose Owsho?
+          </button>
         </a>
-        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <div class="menu-icon" id="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
 
       <nav class="nav-links" id="nav-links">
-        <a href="index.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#services">Services</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#vendor">Vendor Onboarding</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#how-it-works"><i class="fas fa-cogs"></i> How It Works</a>
+        <a href="#services"><i class="fas fa-concierge-bell"></i> Services</a>
+        <a href="#testimonials"><i class="fas fa-comments"></i> Testimonials</a>
+        <a href="#vendor"><i class="fas fa-store"></i> Vendor Onboarding</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
       </nav>
     </header>
 
@@ -57,9 +64,11 @@
             Discover a smarter<br /><span>way to shop local!</span>
           </h1>
           <p class="animate-fade-delay">
+            <i class="fas fa-shopping-bag"></i>
             From Groceries to Book Services — Anything, Anywhere!
           </p>
           <h4 class="animate-fade-delay">
+            <i class="fas fa-clock"></i>
             Everything Nearby, Delivered in Minutes!
           </h4>
 
@@ -68,46 +77,65 @@
               href="https://play.google.com/store/apps/details?id=com.app.cityshow&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
+              class="download-btn google-btn"
             >
               <img
                 src="assets/google-play-badge.png"
                 alt="Get it on Google Play"
                 class="badge google-badge"
               />
+              <div class="download-overlay">
+                <i class="fab fa-google-play"></i>
+                <span>Download Now</span>
+              </div>
             </a>
 
             <a
               href="https://play.google.com/store/apps/details?id=com.app.cityshow&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
+              class="download-btn apple-btn"
             >
               <img
                 src="assets/app-store-badge.png"
                 alt="Download on the App Store"
                 class="badge apple-badge"
               />
+              <div class="download-overlay">
+                <i class="fab fa-apple"></i>
+                <span>Download Now</span>
+              </div>
             </a>
           </div>
         </div>
         <div class="hero-image">
           <div class="hero-phone-mockup">
-            <img
-              src="assets/E-commerce Workshop.png"
-              alt="Shopping App Interface"
-              class="hero-app-screen"
-            />
+            <div class="phone-frame">
+              <img
+                src="assets/E-commerce Workshop.png"
+                alt="Shopping App Interface"
+                class="hero-app-screen"
+              />
+              <div class="phone-gloss"></div>
+            </div>
           </div>
           <div class="floating-elements">
             <div class="floating-card delivery">
-              <i class="fas fa-shipping-fast"></i>
+              <div class="card-icon">
+                <i class="fas fa-shipping-fast"></i>
+              </div>
               <span>In Min Delivery</span>
             </div>
             <div class="floating-card shops">
-              <i class="fas fa-store"></i>
+              <div class="card-icon">
+                <i class="fas fa-store"></i>
+              </div>
               <span>5000+ Shops</span>
             </div>
             <div class="floating-card services">
-              <i class="fas fa-tools"></i>
+              <div class="card-icon">
+                <i class="fas fa-tools"></i>
+              </div>
               <span>Product and Services</span>
             </div>
           </div>
@@ -122,30 +150,46 @@
           <div class="stat-item">
             <div class="stat-icon">
               <i class="fas fa-users"></i>
+              <div class="icon-bg"></div>
             </div>
             <div class="stat-number" data-count="15000">0</div>
             <div class="stat-label">Happy Customers</div>
+            <div class="stat-progress">
+              <div class="progress-bar" data-width="85"></div>
+            </div>
           </div>
           <div class="stat-item">
             <div class="stat-icon">
               <i class="fas fa-store"></i>
+              <div class="icon-bg"></div>
             </div>
             <div class="stat-number" data-count="5000">0</div>
             <div class="stat-label">Partner Stores</div>
+            <div class="stat-progress">
+              <div class="progress-bar" data-width="70"></div>
+            </div>
           </div>
           <div class="stat-item">
             <div class="stat-icon">
               <i class="fas fa-clock"></i>
+              <div class="icon-bg"></div>
             </div>
             <div class="stat-number" data-count="10">0</div>
             <div class="stat-label">Min Avg Delivery</div>
+            <div class="stat-progress">
+              <div class="progress-bar" data-width="95"></div>
+            </div>
           </div>
           <div class="stat-item">
             <div class="stat-icon">
               <i class="fas fa-city"></i>
+              <div class="icon-bg"></div>
             </div>
             <div class="stat-number" data-count="2">0</div>
             <div class="stat-label">Cities Covered</div>
+            <div class="stat-progress">
+              <div class="progress-bar" data-width="40"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -156,10 +200,13 @@
       <div class="about-owsho-container">
         <div class="about-owsho-content">
           <div class="about-owsho-text">
-            <h2>About Owsho</h2>
-            <h3>
-              India's First <span>Hyperlocal Multi-Vendor Marketplace</span>
-            </h3>
+            <div class="section-header">
+              <span class="section-badge">About Us</span>
+              <h2>About Owsho</h2>
+              <h3>
+                India's First <span>Hyperlocal Multi-Vendor Marketplace</span>
+              </h3>
+            </div>
             <br />
             <p>
               <strong
@@ -187,6 +234,9 @@
               – <strong>Owsho is your go-to solution</strong>.
             </p>
             <div class="mission-statement">
+              <div class="mission-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
               <p>
                 <strong
                   >Owsho isn't just a marketplace — it's a movement.</strong
@@ -205,9 +255,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <i class="fas fa-handshake"></i>
                 Join us
               </a>
-
               — and be part of India's retail shop digitally.
             </p>
           </div>
@@ -225,6 +275,7 @@
                     <span>Empowering Local Business</span>
                   </div>
                 </div>
+                <div class="image-border"></div>
               </div>
               <div class="about-small-images">
                 <div class="small-img-container">
@@ -232,11 +283,17 @@
                     src="assets/digital-growth.jpg"
                     alt="Digital Marketplace"
                   />
-                  <div class="small-overlay">Digital Growth</div>
+                  <div class="small-overlay">
+                    <i class="fas fa-chart-line"></i>
+                    Digital Growth
+                  </div>
                 </div>
                 <div class="small-img-container">
                   <img src="assets/quick-delivery.jpg" alt="Fast Delivery" />
-                  <div class="small-overlay">Quick Delivery</div>
+                  <div class="small-overlay">
+                    <i class="fas fa-bolt"></i>
+                    Quick Delivery
+                  </div>
                 </div>
               </div>
             </div>
@@ -250,7 +307,10 @@
       <div class="showcase-container">
         <div class="showcase-content">
           <div class="showcase-text">
-            <h2>Experience the Future of Local Shopping</h2>
+            <div class="section-header">
+              <span class="section-badge light">App Experience</span>
+              <h2>Experience the Future of Local Shopping</h2>
+            </div>
             <p>
               Our cutting-edge mobile app brings thousands of local vendors to
               your fingertips. Shop from your favorite neighborhood stores with
@@ -258,37 +318,60 @@
             </p>
             <div class="feature-highlights">
               <div class="feature-highlight">
-                <i class="fas fa-mobile-alt"></i>
-                <span>User-Friendly Interface</span>
+                <div class="feature-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>User-Friendly Interface</h4>
+                  <p>Intuitive design for seamless shopping</p>
+                </div>
               </div>
               <div class="feature-highlight">
-                <i class="fas fa-search-location"></i>
-                <span>Smart Location-Based Discovery</span>
+                <div class="feature-icon">
+                  <i class="fas fa-search-location"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Smart Location-Based Discovery</h4>
+                  <p>Find nearby shops instantly</p>
+                </div>
               </div>
               <div class="feature-highlight">
-                <i class="fas fa-bolt"></i>
-                <span>Lightning-Fast Checkout</span>
+                <div class="feature-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Lightning-Fast Checkout</h4>
+                  <p>Complete orders in seconds</p>
+                </div>
               </div>
             </div>
           </div>
           <div class="showcase-phones">
             <div class="phone-mockup phone-1">
-              <img src="assets/screenshot3.jpeg" alt="Home Screen" />
-              <div class="phone-features">
-                <div
-                  class="feature-dot"
-                  data-feature="Browse Local Stores"
-                ></div>
+              <div class="phone-frame">
+                <img src="assets/screenshot3.jpeg" alt="Home Screen" />
+                <div class="phone-features">
+                  <div class="feature-dot" data-feature="Browse Local Stores">
+                    <div class="dot-pulse"></div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="phone-mockup phone-2 featured">
-              <img src="assets/screenshot1.jpeg" alt="Shop Interface" />
-              <div class="phone-glow"></div>
+              <div class="phone-frame">
+                <img src="assets/screenshot1.jpeg" alt="Shop Interface" />
+                <div class="phone-glow"></div>
+                <div class="phone-spotlight"></div>
+              </div>
             </div>
             <div class="phone-mockup phone-3">
-              <img src="assets/screenshot2.jpeg" alt="Checkout Process" />
-              <div class="phone-features">
-                <div class="feature-dot" data-feature="Quick Checkout"></div>
+              <div class="phone-frame">
+                <img src="assets/screenshot2.jpeg" alt="Checkout Process" />
+                <div class="phone-features">
+                  <div class="feature-dot" data-feature="Quick Checkout">
+                    <div class="dot-pulse"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -300,15 +383,21 @@
       </div>
     </section>
 
-    <!-- How It Works Section with Images -->
+    <!-- How It Works Section -->
     <section class="how-it-works-section" id="how-it-works">
       <div class="container">
-        <h2>Your Journey with Owsho — Step by Step</h2>
+        <div class="section-header center">
+          <span class="section-badge">Process</span>
+          <h2>Your Journey with Owsho — Step by Step</h2>
+        </div>
         <div class="steps-grid">
           <div class="step-card">
             <div class="step-image">
               <img src="assets/Local.jpeg" alt="Local Shops" />
-              <div class="step-number">1</div>
+              <div class="step-number">
+                <span>1</span>
+              </div>
+              <div class="image-frame"></div>
             </div>
             <div class="step-content">
               <h3>Explore Trusted Local Shops & Services</h3>
@@ -317,12 +406,18 @@
                 discover 1000s of verified vendors near you. All available on
                 one powerful platform.
               </p>
+              <div class="step-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
             </div>
           </div>
           <div class="step-card">
             <div class="step-image">
               <img src="assets/del.jpeg" alt="Mobile Ordering" />
-              <div class="step-number">2</div>
+              <div class="step-number">
+                <span>2</span>
+              </div>
+              <div class="image-frame"></div>
             </div>
             <div class="step-content">
               <h3>Place Your Order in Minutes</h3>
@@ -331,12 +426,18 @@
                 time, and place the order — all in just a few taps. No hassle,
                 no waiting.
               </p>
+              <div class="step-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
             </div>
           </div>
           <div class="step-card">
             <div class="step-image">
               <img src="assets/Neigh.jpeg" alt="Fast Delivery" />
-              <div class="step-number">3</div>
+              <div class="step-number">
+                <span>3</span>
+              </div>
+              <div class="image-frame"></div>
             </div>
             <div class="step-content">
               <h3>Superfast Delivery from Your Neighbourhood</h3>
@@ -344,12 +445,18 @@
                 Our dedicated delivery fleet picks up your order directly from
                 nearby vendors and delivers it to your doorstep in just minutes.
               </p>
+              <div class="step-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
             </div>
           </div>
           <div class="step-card">
             <div class="step-image">
               <img src="assets/Full.png" alt="Local Shops" />
-              <div class="step-number">4</div>
+              <div class="step-number">
+                <span>4</span>
+              </div>
+              <div class="image-frame"></div>
             </div>
             <div class="step-content">
               <h3>Full Earnings, No Middlemen</h3>
@@ -358,12 +465,18 @@
                 vendors get complete control and 100% profit — with no
                 commission cuts, ever.
               </p>
+              <div class="step-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
             </div>
           </div>
           <div class="step-card">
             <div class="step-image">
               <img src="assets/seamless.jpg" alt="Local Shops" />
-              <div class="step-number">5</div>
+              <div class="step-number">
+                <span>5</span>
+              </div>
+              <div class="image-frame"></div>
             </div>
             <div class="step-content">
               <h3>Seamless Digital Storefronts for Every Vendor</h3>
@@ -372,12 +485,18 @@
                 built-in tools for inventory, orders, and customer engagement —
                 no technical skills needed.
               </p>
+              <div class="step-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
             </div>
           </div>
           <div class="step-card">
             <div class="step-image">
               <img src="assets/Real.jpeg" />
-              <div class="step-number">6</div>
+              <div class="step-number">
+                <span>6</span>
+              </div>
+              <div class="image-frame"></div>
             </div>
             <div class="step-content">
               <h3>Real-Time Tracking & Reliable Support</h3>
@@ -395,13 +514,19 @@
     <!-- Enhanced Services Section -->
     <section class="services-section" id="services">
       <div class="container">
-        <h2>Our Services</h2>
+        <div class="section-header center">
+          <span class="section-badge">What We Offer</span>
+          <h2>Our Services</h2>
+        </div>
 
         <!-- For Vendors Section -->
         <div class="service-category">
           <div class="category-header">
             <div class="category-image">
               <img src="assets/vendor.jpeg" alt="Vendor Success" />
+              <div class="category-overlay">
+                <i class="fas fa-store"></i>
+              </div>
             </div>
             <div class="category-text">
               <h3 class="category-title">
@@ -411,12 +536,25 @@
                 Transform your traditional business into a digital powerhouse
                 with our comprehensive vendor solutions.
               </p>
+              <div class="category-stats">
+                <div class="stat">
+                  <span class="stat-num">0%</span>
+                  <span class="stat-text">Commission</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num">100%</span>
+                  <span class="stat-text">Profit</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="services-grid vendor-services">
             <div class="service-card vendor-card">
               <div class="service-image">
                 <img src="assets/Easy.png" alt="Easy Setup" />
+                <div class="service-overlay">
+                  <i class="fas fa-rocket"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>Easy Onboarding & Setup</h4>
@@ -424,11 +562,18 @@
                   Get your shop online in minutes with dedicated support from
                   our onboarding team — no tech skills required.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">Quick Setup</span>
+                  <span class="feature-tag">24/7 Support</span>
+                </div>
               </div>
             </div>
             <div class="service-card vendor-card">
               <div class="service-image">
                 <img src="assets/zero.jpg" alt="Zero Commission" />
+                <div class="service-overlay">
+                  <i class="fas fa-percentage"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>Zero Commission. 100% Profit</h4>
@@ -436,11 +581,18 @@
                   We charge zero commission. Keep 100% of what you earn with our
                   affordable subscription plans.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">No Commission</span>
+                  <span class="feature-tag">Full Control</span>
+                </div>
               </div>
             </div>
             <div class="service-card vendor-card">
               <div class="service-image">
-                <img src="assets/pan.jpg" alt="Zero Commission" />
+                <img src="assets/pan.jpg" alt="Pan India Reach" />
+                <div class="service-overlay">
+                  <i class="fas fa-globe"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>Pan-India & Local Reach</h4>
@@ -449,11 +601,18 @@
                   our hybrid hyperlocal + ecommerce model — expand your reach
                   without extra cost.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">Local + National</span>
+                  <span class="feature-tag">No Extra Cost</span>
+                </div>
               </div>
             </div>
             <div class="service-card vendor-card">
               <div class="service-image">
-                <img src="assets/Hassle.jpg" alt="Zero Commission" />
+                <img src="assets/Hassle.jpg" alt="Order Management" />
+                <div class="service-overlay">
+                  <i class="fas fa-tasks"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>Hassle-Free Order Handling</h4>
@@ -462,11 +621,18 @@
                   streamlines your backend operations so your shop runs
                   smoothly, even during rush hours.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">Easy Management</span>
+                  <span class="feature-tag">Real-time Updates</span>
+                </div>
               </div>
             </div>
             <div class="service-card vendor-card">
               <div class="service-image">
                 <img src="assets/Marketing.jpg" alt="Marketing Tools" />
+                <div class="service-overlay">
+                  <i class="fas fa-bullhorn"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>Powerful Marketing Tools</h4>
@@ -474,6 +640,10 @@
                   Run offers, discounts, and feature products through built-in
                   promotional tools designed to increase visibility and sales.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">Promotions</span>
+                  <span class="feature-tag">Analytics</span>
+                </div>
               </div>
             </div>
             <div class="service-card vendor-card">
@@ -482,6 +652,9 @@
                   src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=300"
                   alt="Analytics Dashboard"
                 />
+                <div class="service-overlay">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>Real-Time Analytics Dashboard</h4>
@@ -489,6 +662,10 @@
                   Track orders, inventory, customer trends, and performance
                   metrics from one smart dashboard.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">Live Data</span>
+                  <span class="feature-tag">Smart Insights</span>
+                </div>
               </div>
             </div>
           </div>
@@ -499,6 +676,9 @@
           <div class="category-header">
             <div class="category-image">
               <img src="assets/Customer.jpg" alt="Customer Experience" />
+              <div class="category-overlay">
+                <i class="fas fa-users"></i>
+              </div>
             </div>
             <div class="category-text">
               <h3 class="category-title">
@@ -508,12 +688,25 @@
                 Experience the convenience of hyperlocal shopping with our
                 customer-centric features.
               </p>
+              <div class="category-stats">
+                <div class="stat">
+                  <span class="stat-num">10</span>
+                  <span class="stat-text">Min Delivery</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num">5000+</span>
+                  <span class="stat-text">Stores</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="services-grid customer-services">
             <div class="service-card customer-card">
               <div class="service-image">
                 <img src="assets/in.jpg" alt="Fast Delivery" />
+                <div class="service-overlay">
+                  <i class="fas fa-shipping-fast"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>In-Minute Hyperlocal Delivery</h4>
@@ -521,11 +714,18 @@
                   Get products from nearby shops delivered in minutes —
                   groceries, essentials, and more.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">Super Fast</span>
+                  <span class="feature-tag">Local Delivery</span>
+                </div>
               </div>
             </div>
             <div class="service-card customer-card">
               <div class="service-image">
-                <img src="assets/oneapp.jpg" alt="Payment Options" />
+                <img src="assets/oneapp.jpg" alt="One App Solution" />
+                <div class="service-overlay">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>One App, All Essentials</h4>
@@ -533,11 +733,18 @@
                   From Groceries and fashion to repairs and recharge — explore
                   and shop everything you need from local vendors in one app.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">All-in-One</span>
+                  <span class="feature-tag">Local Vendors</span>
+                </div>
               </div>
             </div>
             <div class="service-card customer-card">
               <div class="service-image">
                 <img src="assets/COD.jpg" alt="Payment Options" />
+                <div class="service-overlay">
+                  <i class="fas fa-credit-card"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>Multiple Payment Options</h4>
@@ -545,11 +752,18 @@
                   Choose from flexible payment methods — Cash on Delivery, UPI,
                   Cards, or Wallets — as per your convenience.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">Secure</span>
+                  <span class="feature-tag">Flexible</span>
+                </div>
               </div>
             </div>
             <div class="service-card customer-card">
               <div class="service-image">
-                <img src="assets/Order1.jpg" alt="Payment Options" />
+                <img src="assets/Order1.jpg" alt="Order Tracking" />
+                <div class="service-overlay">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>Order Tracking & Live Updates</h4>
@@ -558,11 +772,18 @@
                   confirmation to doorstep delivery — full visibility at every
                   step.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">Live Tracking</span>
+                  <span class="feature-tag">Real-time</span>
+                </div>
               </div>
             </div>
             <div class="service-card customer-card">
               <div class="service-image">
                 <img src="assets/LOcation.jpg" alt="Location Discovery" />
+                <div class="service-overlay">
+                  <i class="fas fa-search-location"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>Location-Based Discovery</h4>
@@ -570,11 +791,18 @@
                   Find nearby shops and services easily, making your shopping
                   local, quick, and trusted.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">Smart Search</span>
+                  <span class="feature-tag">Nearby</span>
+                </div>
               </div>
             </div>
             <div class="service-card customer-card">
               <div class="service-image">
                 <img src="assets/Review.jpg" alt="Reviews and Ratings" />
+                <div class="service-overlay">
+                  <i class="fas fa-star"></i>
+                </div>
               </div>
               <div class="service-content">
                 <h4>Trusted Reviews & Ratings</h4>
@@ -582,6 +810,10 @@
                   Make informed choices with verified customer reviews on every
                   product and service.
                 </p>
+                <div class="service-features">
+                  <span class="feature-tag">Verified Reviews</span>
+                  <span class="feature-tag">Trusted</span>
+                </div>
               </div>
             </div>
           </div>
@@ -589,20 +821,29 @@
 
         <!-- Why Owsho Section -->
         <div class="why-owsho-section">
-          <h3 class="why-title">Why Owsho?</h3>
-          <div class="why-content">
-            <p>
-              From kirana stores to repair services, Owsho brings local
-              businesses online delivered in city & across India.
-            </p>
-            <p>
-              For vendors, it's a zero-commission platform built for visibility
-              and growth.
-            </p>
-            <p>For customers, it's the fastest way to shop local, online.</p>
-            <p class="tagline-bottom">
-              <strong>One platform. One mission. One Bharat.</strong>
-            </p>
+          <div class="why-content-wrapper">
+            <div class="why-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="why-title">Why Owsho?</h3>
+            <div class="why-content">
+              <p>
+                From kirana stores to repair services, Owsho brings local
+                businesses online delivered in city & across India.
+              </p>
+              <p>
+                For vendors, it's a zero-commission platform built for visibility
+                and growth.
+              </p>
+              <p>For customers, it's the fastest way to shop local, online.</p>
+              <p class="tagline-bottom">
+                <strong>One platform. One mission. One Bharat.</strong>
+              </p>
+            </div>
+            <div class="why-decorations">
+              <div class="decoration-1"></div>
+              <div class="decoration-2"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -611,10 +852,16 @@
     <!-- Testimonials Section -->
     <section class="testimonials-section" id="testimonials">
       <div class="container">
-        <h2>What Our Customers Say</h2>
+        <div class="section-header center">
+          <span class="section-badge">Reviews</span>
+          <h2>What Our Customers Say</h2>
+        </div>
         <div class="testimonials-grid">
           <div class="testimonial-card">
             <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
               <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -628,19 +875,29 @@
                 amazing too!"
               </p>
               <div class="customer-info">
-                <img
-                  src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100"
-                  alt="Sarah Johnson"
-                />
-                <div>
-                  <h4>Shivani Thakkar, Deesa</h4>
-                  <span>Regular Customer</span>
+                <div class="customer-avatar">
+                  <img
+                    src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100"
+                    alt="Sarah Johnson"
+                  />
+                  <div class="avatar-ring"></div>
+                </div>
+                <div class="customer-details">
+                  <h4>Shivani Thakkar</h4>
+                  <span>Regular Customer, Deesa</span>
+                  <div class="customer-badge">
+                    <i class="fas fa-verified-check"></i>
+                    Verified
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
               <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -654,19 +911,29 @@
                 excellent!"
               </p>
               <div class="customer-info">
-                <img
-                  src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100"
-                  alt="Mike Chen"
-                />
-                <div>
+                <div class="customer-avatar">
+                  <img
+                    src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100"
+                    alt="Mike Chen"
+                  />
+                  <div class="avatar-ring"></div>
+                </div>
+                <div class="customer-details">
                   <h4>TirthBhai Mali</h4>
-                  <span>Shivgar Kirana</span>
+                  <span>Shivgar Kirana Owner</span>
+                  <div class="customer-badge">
+                    <i class="fas fa-store"></i>
+                    Vendor
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
               <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -680,19 +947,29 @@
                 supporting local business."
               </p>
               <div class="customer-info">
-                <img
-                  src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100"
-                  alt="Mike Chen"
-                />
-                <div>
+                <div class="customer-avatar">
+                  <img
+                    src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100"
+                    alt="Mike Chen"
+                  />
+                  <div class="avatar-ring"></div>
+                </div>
+                <div class="customer-details">
                   <h4>Luhar Ramesh</h4>
-                  <span>Palanpur</span>
+                  <span>Happy Customer, Palanpur</span>
+                  <div class="customer-badge">
+                    <i class="fas fa-heart"></i>
+                    Loyal
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
               <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -705,13 +982,20 @@
                 service and they arrived exactly on time. Highly recommended!"
               </p>
               <div class="customer-info">
-                <img
-                  src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100"
-                  alt="Emily Davis"
-                />
-                <div>
+                <div class="customer-avatar">
+                  <img
+                    src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100"
+                    alt="Emily Davis"
+                  />
+                  <div class="avatar-ring"></div>
+                </div>
+                <div class="customer-details">
                   <h4>Bhavesh Sundesha</h4>
-                  <span>Malgadh</span>
+                  <span>Service User, Malgadh</span>
+                  <div class="customer-badge">
+                    <i class="fas fa-tools"></i>
+                    Services
+                  </div>
                 </div>
               </div>
             </div>
@@ -725,34 +1009,100 @@
       <div class="container">
         <div class="vendor-content">
           <div class="vendor-text">
-            <h2>Join Owsho as a Vendor</h2>
-            <h3>Grow Your Business with Us</h3>
+            <div class="section-header">
+              <span class="section-badge light">Partnership</span>
+              <h2>Join Owsho as a Vendor</h2>
+              <h3>Grow Your Business with Us</h3>
+            </div>
             <p>
               Connect with thousands of local customers and expand your reach.
               Our platform provides everything you need to succeed in the
               digital marketplace.
             </p>
             <ul class="vendor-benefits">
-              <li><i class="fas fa-check"></i> Easy setup and onboarding</li>
-              <li><i class="fas fa-check"></i> Real-time order management</li>
-              <li><i class="fas fa-check"></i> Secure payment processing</li>
               <li>
-                <i class="fas fa-check"></i> Marketing and promotional tools
+                <div class="benefit-icon">
+                  <i class="fas fa-check"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>Easy setup and onboarding</h5>
+                  <p>Get started in minutes with our guided setup</p>
+                </div>
               </li>
-              <li><i class="fas fa-check"></i> 24/7 customer support</li>
+              <li>
+                <div class="benefit-icon">
+                  <i class="fas fa-check"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>Real-time order management</h5>
+                  <p>Track and manage all orders from one dashboard</p>
+                </div>
+              </li>
+              <li>
+                <div class="benefit-icon">
+                  <i class="fas fa-check"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>Secure payment processing</h5>
+                  <p>Get paid instantly with our secure payment system</p>
+                </div>
+              </li>
+              <li>
+                <div class="benefit-icon">
+                  <i class="fas fa-check"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>Marketing and promotional tools</h5>
+                  <p>Promote your products with built-in marketing tools</p>
+                </div>
+              </li>
+              <li>
+                <div class="benefit-icon">
+                  <i class="fas fa-check"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>24/7 customer support</h5>
+                  <p>Get help whenever you need it</p>
+                </div>
+              </li>
             </ul>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSe5Cjii3olh4m50jBA7Qr7nVUgMoEDBo9DgjUFtXnDDQAyeEQ/viewform?usp=dialog"
               target="_blank"
+              class="vendor-btn"
             >
-              <button class="vendor-btn">Become a Vendor</button>
+              <i class="fas fa-rocket"></i>
+              Become a Vendor
+              <div class="btn-shine"></div>
             </a>
           </div>
           <div class="vendor-image">
-            <img
-              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Vendor Success"
-            />
+            <div class="image-container">
+              <img
+                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Vendor Success"
+              />
+              <div class="vendor-stats">
+                <div class="vendor-stat">
+                  <div class="stat-icon">
+                    <i class="fas fa-store"></i>
+                  </div>
+                  <div class="stat-info">
+                    <span class="stat-number">5000+</span>
+                    <span class="stat-label">Active Vendors</span>
+                  </div>
+                </div>
+                <div class="vendor-stat">
+                  <div class="stat-icon">
+                    <i class="fas fa-chart-up"></i>
+                  </div>
+                  <div class="stat-info">
+                    <span class="stat-number">300%</span>
+                    <span class="stat-label">Avg Growth</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -761,86 +1111,139 @@
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
       <div class="container">
-        <h2>Get in Touch</h2>
+        <div class="section-header center">
+          <span class="section-badge">Contact</span>
+          <h2>Get in Touch</h2>
+          <p>Ready to start your journey with Owsho? We're here to help!</p>
+        </div>
         <div class="contact-content">
           <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>Address</h4>
-                <p>
-                  <a
-                    href="https://www.google.com/maps/place/7A+Nilkanth+Arched,+Deesa,+Gujarat+385535"
-                    target="_blank"
-                    style="text-decoration: none; color: inherit"
-                  >
-                    7A Nilkanth Arched, 2nd Floor, Palanpur Highway,<br />Deesa,
-                    Gujarat, India, 385535
-                  </a>
-                </p>
+            <div class="contact-card">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Address</h4>
+                  <p>
+                    <a
+                      href="https://www.google.com/maps/place/7A+Nilkanth+Arched,+Deesa,+Gujarat+385535"
+                      target="_blank"
+                      style="text-decoration: none; color: inherit"
+                    >
+                      7A Nilkanth Arched, 2nd Floor, Palanpur Highway,<br />Deesa,
+                      Gujarat, India, 385535
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <div>
-                <h4>Phone</h4>
-                <p>
-                  <a
-                    href="tel:+918200877397"
-                    style="text-decoration: none; color: inherit"
-                    >+91 8200877397</a
-                  >
-                </p>
+            
+            <div class="contact-card">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Phone</h4>
+                  <p>
+                    <a
+                      href="tel:+918200877397"
+                      style="text-decoration: none; color: inherit"
+                      >+91 8200877397</a
+                    >
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h4>Email</h4>
-                <p>
-                  <a
-                    href="mailto:owshomarketplace@gmail.com"
-                    style="text-decoration: none; color: inherit"
-                    >owshomarketplace@gmail.com</a
-                  >
-                </p>
+            
+            <div class="contact-card">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <p>
+                    <a
+                      href="mailto:owshomarketplace@gmail.com"
+                      style="text-decoration: none; color: inherit"
+                      >owshomarketplace@gmail.com</a
+                    >
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Contact Form -->
-          <div class="contact-form">
-            <form action="contact.php" method="POST">
-              <div class="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  required
-                />
+          <div class="contact-form-wrapper">
+            <div class="contact-form">
+              <div class="form-header">
+                <h3>Send us a Message</h3>
+                <p>We'll get back to you within 24 hours</p>
               </div>
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                required
-              />
-              <br /><br />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="5"
-                required
-              ></textarea>
-              <br /><br />
-              <button type="submit">Send Message</button>
-            </form>
+              <form action="contact.php" method="POST" id="contact-form">
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-icon">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                    />
+                    <div class="input-line"></div>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                    <div class="input-line"></div>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <div class="input-icon">
+                    <i class="fas fa-tag"></i>
+                  </div>
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                  />
+                  <div class="input-line"></div>
+                </div>
+                <div class="input-group">
+                  <div class="input-icon">
+                    <i class="fas fa-message"></i>
+                  </div>
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    rows="5"
+                    required
+                  ></textarea>
+                  <div class="input-line"></div>
+                </div>
+                <button type="submit" class="submit-btn">
+                  <span class="btn-text">Send Message</span>
+                  <div class="btn-loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    Sending...
+                  </div>
+                  <i class="fas fa-paper-plane btn-icon"></i>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -858,26 +1261,52 @@
               Redefining how you shop locally. Everything nearby, delivered in
               minutes!
             </p>
+            <div class="footer-social">
+              <a
+                href="https://www.facebook.com/share/1FipUpk4sq/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/owshomarketplace?igsh=ZjFxamVzMWJobTI0"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/owhso-marketplace/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
           </div>
         </div>
 
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#vendor">Become a Vendor</a></li>
+            <li><a href="#about"><i class="fas fa-angle-right"></i> About Us</a></li>
+            <li><a href="#how-it-works"><i class="fas fa-angle-right"></i> How It Works</a></li>
+            <li><a href="#services"><i class="fas fa-angle-right"></i> Services</a></li>
+            <li><a href="#vendor"><i class="fas fa-angle-right"></i> Become a Vendor</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
           <h4>Support</h4>
           <ul>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Help Center</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Privacy Policy</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> Terms of Service</a></li>
+            <li><a href="#contact"><i class="fas fa-angle-right"></i> Contact Us</a></li>
           </ul>
         </div>
 
@@ -888,17 +1317,18 @@
               href="https://play.google.com/store/apps/details?id=com.app.cityshow&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
+              class="app-badge-link"
             >
               <img
                 src="assets/google-play-badge.png"
                 alt="Get it on Google Play"
               />
             </a>
-
             <a
               href="https://play.google.com/store/apps/details?id=com.app.cityshow&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
+              class="app-badge-link"
             >
               <img
                 src="assets/app-store-badge.png"
@@ -907,65 +1337,82 @@
             </a>
           </div>
 
-          <div class="social-links">
-            <a
-              href="https://www.facebook.com/share/1FipUpk4sq/?mibextid=wwXIfr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-facebook"></i>
-            </a>
-
-            <a
-              href="https://www.instagram.com/owshomarketplace?igsh=ZjFxamVzMWJobTI0"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-
-            <a
-              href="https://www.instagram.com/owshomarketplace?igsh=ZjFxamVzMWJobTI0"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/company/owhso-marketplace/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
+          <div class="newsletter-signup">
+            <h5>Stay Updated</h5>
+            <form class="newsletter-form" id="newsletter-form">
+              <div class="newsletter-input">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Owsho Marketplace Pvt Ltd. All rights reserved.</p>
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 Owsho Marketplace Pvt Ltd. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <!-- Newsletter Popup -->
+    <!-- Enhanced Newsletter Popup -->
     <div class="newsletter-popup" id="newsletter-popup">
       <div class="popup-content">
-        <span class="close-btn" id="close-popup">&times;</span>
-        <img src="assets/logo1.png" class="popup-logo" alt="Logo" />
-        <h3>SUBSCRIBE TO NEWSLETTER</h3>
-        <p>
-          Subscribe to the mailing list to receive updates on new arrivals,
-          special offers, and promotions.
-        </p>
-        <form class="popup-form">
-          <input type="email" placeholder="Your email address" required />
-          <button type="submit">SUBMIT</button>
+        <span class="close-btn" id="close-popup">
+          <i class="fas fa-times"></i>
+        </span>
+        <div class="popup-header">
+          <div class="popup-icon">
+            <i class="fas fa-envelope-open"></i>
+          </div>
+          <img src="assets/logo1.png" class="popup-logo" alt="Logo" />
+          <h3>SUBSCRIBE TO NEWSLETTER</h3>
+          <p>
+            Subscribe to the mailing list to receive updates on new arrivals,
+            special offers, and promotions.
+          </p>
+        </div>
+        <form class="popup-form" id="popup-form">
+          <div class="popup-input-group">
+            <div class="popup-input-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <input type="email" placeholder="Your email address" required />
+            <div class="input-focus-line"></div>
+          </div>
+          <button type="submit" class="popup-submit-btn">
+            <span>SUBMIT</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
         </form>
-        <label
-          ><input type="checkbox" id="dont-show-again" /> Don't show this popup
-          again</label
-        >
+        <label class="popup-checkbox">
+          <input type="checkbox" id="dont-show-again" />
+          <div class="checkbox-custom"></div>
+          Don't show this popup again
+        </label>
+        <div class="popup-decorations">
+          <div class="popup-decoration-1"></div>
+          <div class="popup-decoration-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="success-message">
+      <div class="success-content">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h4>Message Sent Successfully!</h4>
+        <p>Thank you for contacting us. We'll get back to you soon.</p>
       </div>
     </div>
   </body>
