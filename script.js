@@ -5,7 +5,7 @@ const navLinks = document.getElementById('nav-links');
 menuIcon.addEventListener('click', (e) => {
     e.stopPropagation();
     navLinks.classList.toggle('show');
-    
+
     // Animate hamburger menu
     const spans = menuIcon.querySelectorAll('span');
     if (navLinks.classList.contains('show')) {
@@ -138,15 +138,15 @@ popupForm.addEventListener('submit', async (e) => {
     try {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 2000));
-        
+
         // Show success message
         showSuccessMessage('Thank you for subscribing! Welcome to our newsletter.');
         newsletterPopup.style.display = 'none';
         localStorage.setItem('newsletter-closed', 'true');
-        
+
         // Reset form
         emailInput.value = '';
-        
+
         console.log('Newsletter subscription:', email);
     } catch (error) {
         alert('Something went wrong. Please try again later.');
@@ -179,10 +179,10 @@ if (footerNewsletterForm) {
         try {
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1500));
-            
+
             showSuccessMessage('Successfully subscribed to our newsletter!');
             emailInput.value = '';
-            
+
             console.log('Footer newsletter subscription:', email);
         } catch (error) {
             alert('Something went wrong. Please try again later.');
@@ -228,7 +228,7 @@ if (contactForm) {
         }
 
         const submitBtn = contactForm.querySelector('.submit-btn');
-        
+
         // Show loading state
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
@@ -243,7 +243,7 @@ if (contactForm) {
             if (response.ok) {
                 showSuccessMessage('Message sent successfully! We\'ll get back to you within 24 hours.');
                 contactForm.reset();
-                
+
                 // Reset input line animations
                 document.querySelectorAll('.input-line').forEach(line => {
                     line.style.width = '0';
@@ -290,10 +290,10 @@ function showSuccessMessage(message, duration = 5000) {
     `;
 
     document.body.appendChild(successMessage);
-    
+
     // Trigger animation
     setTimeout(() => successMessage.classList.add('show'), 100);
-    
+
     // Auto remove
     setTimeout(() => {
         successMessage.classList.remove('show');
@@ -328,7 +328,7 @@ const statsObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const statNumbers = entry.target.querySelectorAll('.stat-number');
             const progressBars = entry.target.querySelectorAll('.progress-bar');
-            
+
             statNumbers.forEach((stat, index) => {
                 const count = parseInt(stat.getAttribute('data-count'));
                 setTimeout(() => {
@@ -463,7 +463,7 @@ function updateParallax() {
         const yPos = -(scrolled * speed);
         element.style.transform = `translate3d(0, ${yPos}px, 0)`;
     });
-    
+
     ticking = false;
 }
 
@@ -482,35 +482,35 @@ function initServicesCarousel() {
     const vendorServicesGrid = document.querySelector('.vendor-services');
     if (vendorServicesGrid) {
         const vendorCards = Array.from(vendorServicesGrid.children);
-        
+
         if (vendorCards.length > 0) {
             // Create wrapper for smooth sliding
             const vendorWrapper = document.createElement('div');
             vendorWrapper.className = 'services-wrapper';
-            
+
             // Move all cards to wrapper
             vendorCards.forEach(card => {
                 vendorWrapper.appendChild(card);
             });
-            
+
             // Clone first 3 cards for seamless loop
             for (let i = 0; i < Math.min(3, vendorCards.length); i++) {
                 const clone = vendorCards[i].cloneNode(true);
                 vendorWrapper.appendChild(clone);
             }
-            
+
             vendorServicesGrid.appendChild(vendorWrapper);
-            
+
             let vendorIndex = 0;
             const vendorTotalCards = vendorCards.length;
             const vendorCardsToShow = window.innerWidth <= 768 ? 1 : 3;
             const vendorCardWidth = 100 / vendorCardsToShow;
-            
+
             function slideVendorCards() {
                 vendorIndex++;
                 const translateX = -(vendorIndex * vendorCardWidth);
                 vendorWrapper.style.transform = `translateX(${translateX}%)`;
-                
+
                 // Reset to beginning when reaching cloned cards
                 if (vendorIndex >= vendorTotalCards) {
                     setTimeout(() => {
@@ -523,45 +523,45 @@ function initServicesCarousel() {
                     }, 800);
                 }
             }
-            
+
             // Auto-slide every 4 seconds
             setInterval(slideVendorCards, 4000);
         }
     }
-    
+
     // Initialize Customer Services Carousel
     const customerServicesGrid = document.querySelector('.customer-services');
     if (customerServicesGrid) {
         const customerCards = Array.from(customerServicesGrid.children);
-        
+
         if (customerCards.length > 0) {
             // Create wrapper for smooth sliding
             const customerWrapper = document.createElement('div');
             customerWrapper.className = 'services-wrapper';
-            
+
             // Move all cards to wrapper
             customerCards.forEach(card => {
                 customerWrapper.appendChild(card);
             });
-            
+
             // Clone first 3 cards for seamless loop
             for (let i = 0; i < Math.min(3, customerCards.length); i++) {
                 const clone = customerCards[i].cloneNode(true);
                 customerWrapper.appendChild(clone);
             }
-            
+
             customerServicesGrid.appendChild(customerWrapper);
-            
+
             let customerIndex = 0;
             const customerTotalCards = customerCards.length;
             const customerCardsToShow = window.innerWidth <= 768 ? 1 : 3;
             const customerCardWidth = 100 / customerCardsToShow;
-            
+
             function slideCustomerCards() {
                 customerIndex++;
                 const translateX = -(customerIndex * customerCardWidth);
                 customerWrapper.style.transform = `translateX(${translateX}%)`;
-                
+
                 // Reset to beginning when reaching cloned cards
                 if (customerIndex >= customerTotalCards) {
                     setTimeout(() => {
@@ -574,7 +574,7 @@ function initServicesCarousel() {
                     }, 800);
                 }
             }
-            
+
             // Auto-slide every 4.5 seconds (different timing from vendor)
             setInterval(slideCustomerCards, 4500);
         }
@@ -595,7 +595,7 @@ function initTestimonialCarousel() {
         } else {
             scrollAmount += cardWidth;
         }
-        
+
         testimonialContainer.scrollTo({
             left: scrollAmount,
             behavior: 'smooth'
@@ -634,7 +634,7 @@ function updateMouseParallax() {
             shape.style.transform = `translate(${x}px, ${y}px)`;
         });
     }
-    
+
     requestAnimationFrame(updateMouseParallax);
 }
 
@@ -646,7 +646,7 @@ document.addEventListener('keydown', (e) => {
         if (newsletterPopup.style.display === 'flex') {
             closeNewsletterPopup();
         }
-        
+
         // Reset mobile menu animation
         const spans = menuIcon.querySelectorAll('span');
         spans[0].style.transform = '';
@@ -702,7 +702,7 @@ window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
             navLinks.classList.remove('show');
             navbar.style.transform = 'translateY(0)';
-            
+
             // Reset hamburger animation
             const spans = menuIcon.querySelectorAll('span');
             spans[0].style.transform = '';
@@ -711,7 +711,7 @@ window.addEventListener('resize', () => {
         }
 
         adjustFontSizes();
-        
+
         // Reinitialize carousels with new dimensions
         setTimeout(() => {
             initServicesCarousel();
@@ -748,7 +748,7 @@ window.addEventListener('load', () => {
         initServicesCarousel();
         initTestimonialCarousel();
     }, 100);
-    
+
     // Start mouse parallax
     updateMouseParallax();
 });
@@ -756,7 +756,7 @@ window.addEventListener('load', () => {
 // Page Visibility API for performance optimization
 document.addEventListener('visibilitychange', () => {
     const isVisible = document.visibilityState === 'visible';
-    
+
     // Pause/resume animations based on visibility
     document.querySelectorAll('.floating-card, .shape').forEach(element => {
         element.style.animationPlayState = isVisible ? 'running' : 'paused';
@@ -805,9 +805,9 @@ function measurePerformance() {
             setTimeout(() => {
                 const perfData = performance.getEntriesByType('navigation')[0];
                 const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-                
+
                 console.log('Page Load Time:', loadTime + 'ms');
-                
+
                 // Track long tasks
                 if ('PerformanceObserver' in window) {
                     const observer = new PerformanceObserver((list) => {
@@ -823,6 +823,39 @@ function measurePerformance() {
         });
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  function autoScrollGrid(gridSelector, speed = 1) {
+    const grid = document.querySelector(gridSelector);
+    let scrollAmount = 0;
+    let isHovered = false;
+
+    // Duplicate cards for smooth looping
+    grid.innerHTML += grid.innerHTML;
+
+    grid.addEventListener("mouseenter", () => isHovered = true);
+    grid.addEventListener("mouseleave", () => isHovered = false);
+
+    function scrollLoop() {
+      if (!isHovered) {
+        scrollAmount += speed;
+        if (scrollAmount >= grid.scrollWidth / 2) {
+          scrollAmount = 0; // reset for infinite loop
+        }
+        grid.scrollLeft = scrollAmount;
+      }
+      requestAnimationFrame(scrollLoop);
+    }
+    scrollLoop();
+  }
+
+  // Vendors
+  autoScrollGrid(".vendor-grid", 0.5);
+
+  // Customers
+  autoScrollGrid(".customer-grid", 0.5);
+});
+
 
 // Initialize performance monitoring
 measurePerformance();
