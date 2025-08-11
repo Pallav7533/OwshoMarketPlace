@@ -825,36 +825,49 @@ function measurePerformance() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  function autoScrollGrid(gridSelector, speed = 1) {
-    const grid = document.querySelector(gridSelector);
-    let scrollAmount = 0;
-    let isHovered = false;
+    function autoScrollGrid(gridSelector, speed = 1, reverse = false) {
+        const grid = document.querySelector(gridSelector);
+        let scrollAmount = 0;
+        let isHovered = false;
 
-    // Duplicate cards for smooth looping
-    grid.innerHTML += grid.innerHTML;
+        // Duplicate cards for smooth loop
+        grid.innerHTML += grid.innerHTML;
 
-    grid.addEventListener("mouseenter", () => isHovered = true);
-    grid.addEventListener("mouseleave", () => isHovered = false);
+        grid.addEventListener("mouseenter", () => isHovered = true);
+        grid.addEventListener("mouseleave", () => isHovered = false);
 
-    function scrollLoop() {
-      if (!isHovered) {
-        scrollAmount += speed;
-        if (scrollAmount >= grid.scrollWidth / 2) {
-          scrollAmount = 0; // reset for infinite loop
+        function scrollLoop() {
+            if (!isHovered) {
+                scrollAmount += reverse ? -speed : speed;
+
+                if (!reverse && scrollAmount >= grid.scrollWidth / 2) {
+                    scrollAmount = 0;
+                }
+                if (reverse && scrollAmount <= 0) {
+                    scrollAmount = grid.scrollWidth / 2;
+                }
+
+                grid.scrollLeft = scrollAmount;
+            }
+            requestAnimationFrame(scrollLoop);
         }
-        grid.scrollLeft = scrollAmount;
-      }
-      requestAnimationFrame(scrollLoop);
+
+        // Start in the middle if reverse so it goes backwards
+        if (reverse) {
+            scrollAmount = grid.scrollWidth / 2;
+            grid.scrollLeft = scrollAmount;
+        }
+
+        scrollLoop();
     }
-    scrollLoop();
-  }
 
-  // Vendors
-  autoScrollGrid(".vendor-grid", 0.5);
+    // Vendors scroll → right
+    autoScrollGrid(".vendor-grid", 0.5, false);
 
-  // Customers
-  autoScrollGrid(".customer-grid", 0.5);
+    // Customers scroll ← left
+    autoScrollGrid(".customer-grid", 0.5, true);
 });
+
 
 
 // Initialize performance monitoring
