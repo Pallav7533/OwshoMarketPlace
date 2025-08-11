@@ -1,4 +1,4 @@
-// Enhanced Mobile Menu Toggle with Animation
+
 const menuIcon = document.getElementById('menu-icon');
 const navLinks = document.getElementById('nav-links');
 
@@ -6,7 +6,7 @@ menuIcon.addEventListener('click', (e) => {
     e.stopPropagation();
     navLinks.classList.toggle('show');
 
-    // Animate hamburger menu
+
     const spans = menuIcon.querySelectorAll('span');
     if (navLinks.classList.contains('show')) {
         spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
@@ -19,11 +19,11 @@ menuIcon.addEventListener('click', (e) => {
     }
 });
 
-// Close mobile menu when clicking on a link
+
 navLinks.addEventListener('click', (e) => {
     if (e.target.tagName === 'A') {
         navLinks.classList.remove('show');
-        // Reset hamburger animation
+
         const spans = menuIcon.querySelectorAll('span');
         spans[0].style.transform = '';
         spans[1].style.opacity = '1';
@@ -31,11 +31,11 @@ navLinks.addEventListener('click', (e) => {
     }
 });
 
-// Close mobile menu when clicking outside
+
 document.addEventListener('click', (e) => {
     if (!menuIcon.contains(e.target) && !navLinks.contains(e.target)) {
         navLinks.classList.remove('show');
-        // Reset hamburger animation
+
         const spans = menuIcon.querySelectorAll('span');
         spans[0].style.transform = '';
         spans[1].style.opacity = '1';
@@ -43,7 +43,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Smooth Scrolling for Navigation Links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -60,21 +60,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Enhanced Header Scroll Effect with Class Toggle
+
 const navbar = document.querySelector('.navbar');
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Add/remove scrolled class for styling
+
     if (scrollTop > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
 
-    // Hide/show navbar on scroll (mobile)
+
     if (window.innerWidth <= 768) {
         if (scrollTop > lastScrollTop && scrollTop > 200) {
             navbar.style.transform = 'translateY(-100%)';
@@ -86,13 +86,13 @@ window.addEventListener('scroll', () => {
     lastScrollTop = scrollTop;
 });
 
-// Enhanced Newsletter Popup Functionality
+
 const newsletterPopup = document.getElementById('newsletter-popup');
 const closePopup = document.getElementById('close-popup');
 const dontShowAgain = document.getElementById('dont-show-again');
 const popupForm = document.getElementById('popup-form');
 
-// Show popup after 8 seconds if not shown before
+
 setTimeout(() => {
     if (!localStorage.getItem('newsletter-closed') && !sessionStorage.getItem('popup-shown')) {
         newsletterPopup.style.display = 'flex';
@@ -100,7 +100,7 @@ setTimeout(() => {
     }
 }, 8000);
 
-// Close popup function
+
 function closeNewsletterPopup() {
     newsletterPopup.style.display = 'none';
     if (dontShowAgain.checked) {
@@ -108,17 +108,17 @@ function closeNewsletterPopup() {
     }
 }
 
-// Close popup events
+
 closePopup.addEventListener('click', closeNewsletterPopup);
 
-// Close popup when clicking outside
+
 newsletterPopup.addEventListener('click', (e) => {
     if (e.target === newsletterPopup) {
         closeNewsletterPopup();
     }
 });
 
-// Enhanced Newsletter form submission with loading state
+
 popupForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const emailInput = popupForm.querySelector('input[type="email"]');
@@ -130,34 +130,34 @@ popupForm.addEventListener('submit', async (e) => {
         return;
     }
 
-    // Show loading state
+
     const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
     submitBtn.disabled = true;
 
     try {
-        // Simulate API call
+
         await new Promise(resolve => setTimeout(resolve, 2000));
 
-        // Show success message
+
         showSuccessMessage('Thank you for subscribing! Welcome to our newsletter.');
         newsletterPopup.style.display = 'none';
         localStorage.setItem('newsletter-closed', 'true');
 
-        // Reset form
+
         emailInput.value = '';
 
         console.log('Newsletter subscription:', email);
     } catch (error) {
         alert('Something went wrong. Please try again later.');
     } finally {
-        // Reset button
+
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
     }
 });
 
-// Footer Newsletter Form
+
 const footerNewsletterForm = document.getElementById('newsletter-form');
 if (footerNewsletterForm) {
     footerNewsletterForm.addEventListener('submit', async (e) => {
@@ -171,13 +171,13 @@ if (footerNewsletterForm) {
             return;
         }
 
-        // Show loading state
+
         const originalHTML = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
         submitBtn.disabled = true;
 
         try {
-            // Simulate API call
+
             await new Promise(resolve => setTimeout(resolve, 1500));
 
             showSuccessMessage('Successfully subscribed to our newsletter!');
@@ -187,14 +187,14 @@ if (footerNewsletterForm) {
         } catch (error) {
             alert('Something went wrong. Please try again later.');
         } finally {
-            // Reset button
+
             submitBtn.innerHTML = originalHTML;
             submitBtn.disabled = false;
         }
     });
 }
 
-// Enhanced Contact Form Submission with Better UX
+
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -206,7 +206,7 @@ if (contactForm) {
         const subject = formData.get('subject')?.trim();
         const message = formData.get('message')?.trim();
 
-        // Enhanced validation
+
         if (!name || name.length < 2) {
             alert('Please enter a valid name (at least 2 characters).');
             return;
@@ -229,12 +229,12 @@ if (contactForm) {
 
         const submitBtn = contactForm.querySelector('.submit-btn');
 
-        // Show loading state
+
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
 
         try {
-            // Submit form to server
+
             const response = await fetch('contact.php', {
                 method: 'POST',
                 body: formData
@@ -244,7 +244,7 @@ if (contactForm) {
                 showSuccessMessage('Message sent successfully! We\'ll get back to you within 24 hours.');
                 contactForm.reset();
 
-                // Reset input line animations
+
                 document.querySelectorAll('.input-line').forEach(line => {
                     line.style.width = '0';
                 });
@@ -255,20 +255,20 @@ if (contactForm) {
             console.error('Contact form error:', error);
             alert('Sorry, there was an error sending your message. Please try again later or contact us directly.');
         } finally {
-            // Reset button state
+
             submitBtn.classList.remove('loading');
             submitBtn.disabled = false;
         }
     });
 }
 
-// Email validation helper
+
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-// Enhanced Success Message Function
+
 function showSuccessMessage(message, duration = 5000) {
     const existingMessage = document.querySelector('.success-message');
     if (existingMessage) {
@@ -291,20 +291,20 @@ function showSuccessMessage(message, duration = 5000) {
 
     document.body.appendChild(successMessage);
 
-    // Trigger animation
+
     setTimeout(() => successMessage.classList.add('show'), 100);
 
-    // Auto remove
+
     setTimeout(() => {
         successMessage.classList.remove('show');
         setTimeout(() => successMessage.remove(), 400);
     }, duration);
 }
 
-// Enhanced Stats Animation with Intersection Observer
+
 function animateCounter(element, start, end, duration) {
     let startTime = null;
-    const suffix = element.textContent.replace(/[0-9]/g, ''); // Keep any suffix like '%'
+    const suffix = element.textContent.replace(/[0-9]/g, '');
 
     function animation(currentTime) {
         if (startTime === null) startTime = currentTime;
@@ -322,7 +322,7 @@ function animateCounter(element, start, end, duration) {
     requestAnimationFrame(animation);
 }
 
-// Initialize counter animations when stats section is visible
+
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -336,7 +336,7 @@ const statsObserver = new IntersectionObserver((entries) => {
                 }, index * 200);
             });
 
-            // Animate progress bars
+
             progressBars.forEach((bar, index) => {
                 const width = bar.getAttribute('data-width');
                 setTimeout(() => {
@@ -354,7 +354,7 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// Enhanced Scroll Animations with Stagger Effect
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -365,17 +365,17 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             setTimeout(() => {
                 entry.target.classList.add('animate-in');
-            }, index * 100); // Stagger animation
+            }, index * 100);
         }
     });
 }, observerOptions);
 
-// Observe elements for animation
+
 document.querySelectorAll('.step-card, .service-card, .testimonial-card, .stat-item, .contact-card').forEach(el => {
     observer.observe(el);
 });
 
-// Enhanced Touch/Swipe functionality for mobile
+
 let touchStartX = 0;
 let touchEndX = 0;
 let touchStartY = 0;
@@ -397,10 +397,10 @@ function handleSwipe() {
     const swipeDistanceX = touchEndX - touchStartX;
     const swipeDistanceY = touchEndY - touchStartY;
 
-    // Only handle horizontal swipes that are more significant than vertical ones
+
     if (Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY) && Math.abs(swipeDistanceX) > swipeThreshold) {
         if (swipeDistanceX > 0) {
-            // Swipe right - close mobile menu if open
+
             navLinks.classList.remove('show');
             const spans = menuIcon.querySelectorAll('span');
             spans[0].style.transform = '';
@@ -410,14 +410,14 @@ function handleSwipe() {
     }
 }
 
-// Enhanced Lazy Loading for Images with fade effect and loading placeholder
+
 const images = document.querySelectorAll('img[src]');
 const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const img = entry.target;
 
-            // Add loading placeholder
+
             img.style.background = 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)';
             img.style.backgroundSize = '200% 100%';
             img.style.animation = 'loading 1.5s infinite';
@@ -437,7 +437,7 @@ const imageObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1, rootMargin: '50px' });
 
-// Add loading animation keyframes
+
 const style = document.createElement('style');
 style.textContent = `
     @keyframes loading {
@@ -451,7 +451,7 @@ images.forEach(img => {
     imageObserver.observe(img);
 });
 
-// Enhanced Parallax effect for hero shapes with performance optimization
+
 let ticking = false;
 
 function updateParallax() {
@@ -476,24 +476,24 @@ function requestParallaxUpdate() {
 
 window.addEventListener('scroll', requestParallaxUpdate);
 
-// Enhanced Auto-sliding Services Carousel with Proper DOM Structure
+
 function initServicesCarousel() {
-    // Initialize Vendor Services Carousel
+
     const vendorServicesGrid = document.querySelector('.vendor-services');
     if (vendorServicesGrid) {
         const vendorCards = Array.from(vendorServicesGrid.children);
 
         if (vendorCards.length > 0) {
-            // Create wrapper for smooth sliding
+
             const vendorWrapper = document.createElement('div');
             vendorWrapper.className = 'services-wrapper';
 
-            // Move all cards to wrapper
+
             vendorCards.forEach(card => {
                 vendorWrapper.appendChild(card);
             });
 
-            // Clone first 3 cards for seamless loop
+
             for (let i = 0; i < Math.min(3, vendorCards.length); i++) {
                 const clone = vendorCards[i].cloneNode(true);
                 vendorWrapper.appendChild(clone);
@@ -511,7 +511,7 @@ function initServicesCarousel() {
                 const translateX = -(vendorIndex * vendorCardWidth);
                 vendorWrapper.style.transform = `translateX(${translateX}%)`;
 
-                // Reset to beginning when reaching cloned cards
+
                 if (vendorIndex >= vendorTotalCards) {
                     setTimeout(() => {
                         vendorWrapper.style.transition = 'none';
@@ -524,27 +524,27 @@ function initServicesCarousel() {
                 }
             }
 
-            // Auto-slide every 4 seconds
+
             setInterval(slideVendorCards, 4000);
         }
     }
 
-    // Initialize Customer Services Carousel
+
     const customerServicesGrid = document.querySelector('.customer-services');
     if (customerServicesGrid) {
         const customerCards = Array.from(customerServicesGrid.children);
 
         if (customerCards.length > 0) {
-            // Create wrapper for smooth sliding
+
             const customerWrapper = document.createElement('div');
             customerWrapper.className = 'services-wrapper';
 
-            // Move all cards to wrapper
+
             customerCards.forEach(card => {
                 customerWrapper.appendChild(card);
             });
 
-            // Clone first 3 cards for seamless loop
+
             for (let i = 0; i < Math.min(3, customerCards.length); i++) {
                 const clone = customerCards[i].cloneNode(true);
                 customerWrapper.appendChild(clone);
@@ -562,7 +562,7 @@ function initServicesCarousel() {
                 const translateX = -(customerIndex * customerCardWidth);
                 customerWrapper.style.transform = `translateX(${translateX}%)`;
 
-                // Reset to beginning when reaching cloned cards
+
                 if (customerIndex >= customerTotalCards) {
                     setTimeout(() => {
                         customerWrapper.style.transition = 'none';
@@ -575,19 +575,19 @@ function initServicesCarousel() {
                 }
             }
 
-            // Auto-slide every 4.5 seconds (different timing from vendor)
+
             setInterval(slideCustomerCards, 4500);
         }
     }
 }
 
-// Enhanced Testimonial Carousel
+
 function initTestimonialCarousel() {
     const testimonialContainer = document.querySelector('.testimonials-grid');
     if (!testimonialContainer) return;
 
     let scrollAmount = 0;
-    const cardWidth = testimonialContainer.querySelector('.testimonial-card')?.offsetWidth + 48 || 400; // 48 = gap
+    const cardWidth = testimonialContainer.querySelector('.testimonial-card')?.offsetWidth + 48 || 400;
 
     setInterval(() => {
         if (scrollAmount >= testimonialContainer.scrollWidth - testimonialContainer.clientWidth) {
@@ -603,7 +603,7 @@ function initTestimonialCarousel() {
     }, 5000);
 }
 
-// Mouse movement parallax for hero section (desktop only)
+
 let mouseX = 0;
 let mouseY = 0;
 
@@ -638,28 +638,28 @@ function updateMouseParallax() {
     requestAnimationFrame(updateMouseParallax);
 }
 
-// Enhanced Keyboard Navigation Support
+
 document.addEventListener('keydown', (e) => {
-    // Close modals with Escape key
+
     if (e.key === 'Escape') {
         navLinks.classList.remove('show');
         if (newsletterPopup.style.display === 'flex') {
             closeNewsletterPopup();
         }
 
-        // Reset mobile menu animation
+
         const spans = menuIcon.querySelectorAll('span');
         spans[0].style.transform = '';
         spans[1].style.opacity = '1';
         spans[2].style.transform = '';
     }
 
-    // Enhanced Tab navigation
+
     if (e.key === 'Tab') {
         document.body.classList.add('using-keyboard');
     }
 
-    // Arrow key navigation for carousels
+
     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
         const focusedElement = document.activeElement;
         if (focusedElement.closest('.testimonials-grid')) {
@@ -672,12 +672,12 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Remove keyboard class when mouse is used
+
 document.addEventListener('mousedown', () => {
     document.body.classList.remove('using-keyboard');
 });
 
-// Enhanced Responsive Font Size Adjustment
+
 function adjustFontSizes() {
     const viewportWidth = window.innerWidth;
     const html = document.documentElement;
@@ -693,17 +693,17 @@ function adjustFontSizes() {
     }
 }
 
-// Enhanced Window Resize Handler
+
 let resizeTimer;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-        // Close mobile menu on resize to desktop
+
         if (window.innerWidth > 768) {
             navLinks.classList.remove('show');
             navbar.style.transform = 'translateY(0)';
 
-            // Reset hamburger animation
+
             const spans = menuIcon.querySelectorAll('span');
             spans[0].style.transform = '';
             spans[1].style.opacity = '1';
@@ -712,7 +712,7 @@ window.addEventListener('resize', () => {
 
         adjustFontSizes();
 
-        // Reinitialize carousels with new dimensions
+
         setTimeout(() => {
             initServicesCarousel();
             initTestimonialCarousel();
@@ -720,11 +720,11 @@ window.addEventListener('resize', () => {
     }, 250);
 });
 
-// Enhanced Page Load Handler
+
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 
-    // Initialize animations after page load
+
     setTimeout(() => {
         document.querySelectorAll('.animate-fade-delay').forEach((el, index) => {
             setTimeout(() => {
@@ -734,7 +734,7 @@ window.addEventListener('load', () => {
         });
     }, 500);
 
-    // Initialize floating card animations
+
     const floatingCards = document.querySelectorAll('.floating-card');
     floatingCards.forEach((card, index) => {
         setTimeout(() => {
@@ -743,27 +743,27 @@ window.addEventListener('load', () => {
         }, 1000 + (index * 500));
     });
 
-    // Initialize carousels
+
     setTimeout(() => {
         initServicesCarousel();
         initTestimonialCarousel();
     }, 100);
 
-    // Start mouse parallax
+
     updateMouseParallax();
 });
 
-// Page Visibility API for performance optimization
+
 document.addEventListener('visibilitychange', () => {
     const isVisible = document.visibilityState === 'visible';
 
-    // Pause/resume animations based on visibility
+
     document.querySelectorAll('.floating-card, .shape').forEach(element => {
         element.style.animationPlayState = isVisible ? 'running' : 'paused';
     });
 });
 
-// Enhanced Ripple Effect for Interactive Elements
+
 document.querySelectorAll('button, .download-btn, .service-card, .step-card').forEach(element => {
     element.addEventListener('click', function (e) {
         const ripple = document.createElement('span');
@@ -785,7 +785,7 @@ document.querySelectorAll('button, .download-btn, .service-card, .step-card').fo
     });
 });
 
-// Service Worker Registration for PWA capabilities
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
@@ -798,7 +798,7 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Enhanced Performance Monitoring
+
 function measurePerformance() {
     if ('performance' in window) {
         window.addEventListener('load', () => {
@@ -808,7 +808,7 @@ function measurePerformance() {
 
                 console.log('Page Load Time:', loadTime + 'ms');
 
-                // Track long tasks
+
                 if ('PerformanceObserver' in window) {
                     const observer = new PerformanceObserver((list) => {
                         for (const entry of list.getEntries()) {
@@ -830,7 +830,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let scrollAmount = 0;
         let isHovered = false;
 
-        // Duplicate cards for smooth loop
+
         grid.innerHTML += grid.innerHTML;
 
         grid.addEventListener("mouseenter", () => isHovered = true);
@@ -852,7 +852,7 @@ document.addEventListener("DOMContentLoaded", function () {
             requestAnimationFrame(scrollLoop);
         }
 
-        // Start in the middle if reverse so it goes backwards
+
         if (reverse) {
             scrollAmount = grid.scrollWidth / 2;
             grid.scrollLeft = scrollAmount;
@@ -861,19 +861,19 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollLoop();
     }
 
-    // Vendors scroll → right
+
     autoScrollGrid(".vendor-grid", 0.5, false);
 
-    // Customers scroll ← left
+
     autoScrollGrid(".customer-grid", 0.5, true);
 });
 
 
 
-// Initialize performance monitoring
+
 measurePerformance();
 
-// Call adjustFontSizes on initial load
+
 adjustFontSizes();
 
 console.log('🚀 Owsho Enhanced Website with Auto-Swipe Services Loaded Successfully!');

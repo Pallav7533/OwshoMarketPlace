@@ -16,7 +16,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Enhanced Navbar */
 .navbar {
     width: 100%;
     height: 140px;
@@ -195,7 +194,6 @@ html {
     transform: translateX(10px);
 }
 
-/* Enhanced Hero Section */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -404,7 +402,6 @@ html {
     opacity: 1;
 }
 
-/* Enhanced Hero Phone */
 .hero-image {
     position: relative;
     display: flex;
@@ -523,12 +520,11 @@ html {
     animation-delay: 3s;
 }
 
-/* Enhanced Stats Section */
 .stats-section {
     padding: 5rem 0 6rem;
     background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
     position: relative;
-    
+
 }
 
 .stats-grid {
@@ -652,7 +648,6 @@ html {
     width: 0%;
 }
 
-/* Enhanced About Section */
 .about-owsho-section {
     background: #fff;
     padding: 8rem 2rem;
@@ -823,7 +818,6 @@ html {
     transform: scale(1.05);
 }
 
-/* Enhanced About Images */
 .about-owsho-image {
     position: relative;
 }
@@ -967,14 +961,13 @@ html {
     transform: translateY(0);
 }
 
-/* Enhanced App Showcase Section */
 .app-showcase-section {
     position: relative;
     padding: 8rem 0;
     background: linear-gradient(135deg, #0871bd 0%, #0a5a94 100%);
     overflow: hidden;
-    
-    
+
+
 }
 
 .showcase-container {
@@ -1253,14 +1246,12 @@ html {
     animation-delay: 3s;
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* Enhanced How It Works Section */
 .how-it-works-section {
     padding: 8rem 0;
     background: linear-gradient(135deg, #f8f9fa, #ffffff);
@@ -1486,7 +1477,6 @@ html {
     transform: translateX(5px);
 }
 
-/* Enhanced Services Section */
 .services-section {
     padding: 8rem 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -1636,7 +1626,6 @@ html {
     letter-spacing: 1px;
 }
 
-/* Enhanced Services Grid with Horizontal Auto-Swipe */
 .services-grid {
     display: start;
     position: relative;
@@ -1765,7 +1754,6 @@ html {
     letter-spacing: 0.5px;
 }
 
-/* Enhanced Why Owsho Section */
 .why-owsho-section {
     margin-top: 6rem;
     background: linear-gradient(135deg, #0871bd 0%, #064d8c 100%);
@@ -1861,7 +1849,6 @@ html {
     animation-duration: 25s;
 }
 
-/* Testimonials Section */
 .testimonials-section {
     padding: 8rem 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -1891,7 +1878,6 @@ html {
     -webkit-text-fill-color: transparent;
 }
 
-/* Row Headers */
 .testimonials-row-header {
     margin: 2rem 0 1rem 0;
     display: flex;
@@ -1907,7 +1893,6 @@ html {
     letter-spacing: 0.5px;
 }
 
-/* Horizontal Scroll Container */
 .testimonials-grid {
     display: flex;
     gap: 2rem;
@@ -1917,7 +1902,6 @@ html {
     position: relative;
 }
 
-/* Cards */
 .testimonial-card {
     flex: 0 0 300px;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
@@ -1950,7 +1934,6 @@ html {
     border-color: #0871bd;
 }
 
-/* Quote Icon */
 .quote-icon {
     position: absolute;
     top: 20px;
@@ -1967,7 +1950,6 @@ html {
     box-shadow: 0 8px 25px rgba(8, 113, 189, 0.3);
 }
 
-/* Stars */
 .stars {
     color: #fba208;
     margin-bottom: 2rem;
@@ -1977,7 +1959,6 @@ html {
     justify-content: center;
 }
 
-/* Testimonial Text */
 .testimonial-content p {
     color: #333;
     font-size: 1.15rem;
@@ -1987,7 +1968,6 @@ html {
     text-align: center;
 }
 
-/* Customer Info */
 .customer-info {
     display: flex;
     align-items: center;
@@ -2043,14 +2023,12 @@ html {
     text-transform: uppercase;
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* Font Awesome Fix */
 .fas {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -2059,7 +2037,6 @@ html {
 
 
 
-/* Enhanced Vendor Section */
 .vendor-section {
     padding: 8rem 0;
     background: linear-gradient(135deg, #0871bd 0%, #0a5a94 100%);
@@ -2281,7 +2258,6 @@ html {
     font-weight: 600;
 }
 
-/* Enhanced Contact Section */
 .contact-section {
     padding: 8rem 0;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
@@ -2569,7 +2545,6 @@ html {
     display: none;
 }
 
-/* Enhanced Footer */
 .footer {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: white;
@@ -2807,7 +2782,6 @@ html {
     color: #fba208;
 }
 
-/* Enhanced Newsletter Popup */
 .newsletter-popup {
     position: fixed;
     top: 0;
@@ -3103,7 +3077,6 @@ html {
     animation: rotate 15s linear infinite reverse;
 }
 
-/* Success Message */
 .success-message {
     position: fixed;
     top: 20px;
@@ -3155,7 +3128,6 @@ html {
     margin: 0;
 }
 
-/* Animations */
 @keyframes float {
 
     0%,
@@ -3276,7 +3248,6 @@ html {
     transform: translateY(0);
 }
 
-/* Ripple Effect */
 .ripple {
     position: absolute;
     border-radius: 50%;
@@ -3297,7 +3268,6 @@ html {
     }
 }
 
-/* Loading States */
 .loaded {
     opacity: 1;
 }
@@ -3311,7 +3281,6 @@ img.loaded {
     opacity: 1;
 }
 
-/* MOBILE RESPONSIVE DESIGN */
 @media (max-width: 1200px) {
     .hero-content {
         max-width: 100%;

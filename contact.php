@@ -1,19 +1,19 @@
 <?php
-// Set content type to JSON for API-like responses
+
 header('Content-Type: application/json');
 
-// Allow CORS if needed
+
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
-// Handle preflight OPTIONS request
+
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();
 }
 
-// Only allow POST requests
+
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405);
     echo json_encode(['error' => 'Method not allowed']);
@@ -21,13 +21,13 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 }
 
 try {
-    // Get and validate input
+    
     $name = isset($_POST["name"]) ? htmlspecialchars(trim($_POST["name"])) : '';
     $email = isset($_POST["email"]) ? htmlspecialchars(trim($_POST["email"])) : '';
     $subject = isset($_POST["subject"]) ? htmlspecialchars(trim($_POST["subject"])) : '';
     $message = isset($_POST["message"]) ? htmlspecialchars(trim($_POST["message"])) : '';
 
-    // Enhanced validation
+    
     $errors = [];
 
     if (empty($name) || strlen($name) < 2) {
@@ -52,21 +52,21 @@ try {
         exit();
     }
 
-    // Email configuration
+    
     $to = "owshomarketplace@gmail.com";
     $email_subject = "New Contact Form Message: " . $subject;
 
-    // Create professional email message
+    
     $email_body = "<!DOCTYPE html>
 <html>
 <head>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: 
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background: linear-gradient(135deg, #0871bd, #fba208); color: white; padding: 20px; border-radius: 8px 8px 0 0; }
-        .content { background: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
-        .info-box { background: white; padding: 15px; margin: 10px 0; border-radius: 5px; border-left: 4px solid #0871bd; }
-        .footer { text-align: center; margin-top: 20px; font-size: 12px; color: #666; }
+        .header { background: linear-gradient(135deg, 
+        .content { background: 
+        .info-box { background: white; padding: 15px; margin: 10px 0; border-radius: 5px; border-left: 4px solid 
+        .footer { text-align: center; margin-top: 20px; font-size: 12px; color: 
     </style>
 </head>
 <body>
@@ -99,18 +99,18 @@ try {
 </body>
 </html>";
 
-    // Email headers for HTML
+    
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; charset=UTF-8\r\n";
     $headers .= "From: Owsho Website <noreply@owsho.com>\r\n";
     $headers .= "Reply-To: {$email}\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
-    // Attempt to send email
+    
     $mail_sent = mail($to, $email_subject, $email_body, $headers);
 
     if ($mail_sent) {
-        // Log successful submission (optional)
+        
         error_log("Contact form submitted successfully from: $email");
         
         http_response_code(200);
@@ -123,7 +123,7 @@ try {
     }
 
 } catch (Exception $e) {
-    // Log error
+    
     error_log("Contact form error: " . $e->getMessage());
     
     http_response_code(500);
