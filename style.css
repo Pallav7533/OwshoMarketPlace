@@ -510,7 +510,6 @@ html {
 .floating-card.shops {
     top: 65%;
     left: -4.3%;
-
     animation-delay: 1.5s;
 }
 
@@ -524,7 +523,6 @@ html {
     padding: 5rem 0 6rem;
     background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
     position: relative;
-
 }
 
 .stats-grid {
@@ -966,8 +964,6 @@ html {
     padding: 8rem 0;
     background: linear-gradient(135deg, #0871bd 0%, #0a5a94 100%);
     overflow: hidden;
-
-
 }
 
 .showcase-container {
@@ -1138,13 +1134,10 @@ html {
 }
 
 @keyframes spotlight {
-
-    0%,
-    100% {
+    0%, 100% {
         opacity: 0.3;
         transform: scale(1);
     }
-
     50% {
         opacity: 0.8;
         transform: scale(1.2);
@@ -1192,7 +1185,6 @@ html {
         transform: scale(0.8);
         opacity: 1;
     }
-
     100% {
         transform: scale(1.5);
         opacity: 0;
@@ -1626,21 +1618,31 @@ html {
     letter-spacing: 1px;
 }
 
+/* Updated Services Grid for Manual Scroll */
 .services-grid {
-    display: start;
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
-.services-wrapper {
+.services-container {
     display: flex;
-    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 2rem;
+    padding: 1rem 0 2rem 0;
+}
+
+.services-container::-webkit-scrollbar {
+    display: none;
 }
 
 .service-card {
-    flex: 0 0 calc((100% - 4rem) / 3);
-    margin-right: 3rem;
+    flex: 0 0 350px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
     border-radius: 25px;
     overflow: hidden;
@@ -1650,7 +1652,7 @@ html {
     border: 2px solid rgba(8, 113, 189, 0.1);
     backdrop-filter: blur(10px);
     height: 590px;
-
+    cursor: pointer;
 }
 
 .service-card::before {
@@ -1680,6 +1682,64 @@ html {
 
 .customer-card:hover {
     border-color: #0871bd;
+}
+
+/* Navigation Buttons for Services */
+.services-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.nav-btn {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #0871bd, #fba208);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(8, 113, 189, 0.3);
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(8, 113, 189, 0.4);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 0 8px 25px rgba(8, 113, 189, 0.3);
+}
+
+/* Scroll Indicators */
+.scroll-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.scroll-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(8, 113, 189, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.scroll-dot.active {
+    background: #0871bd;
+    transform: scale(1.2);
 }
 
 .service-image {
@@ -1849,6 +1909,7 @@ html {
     animation-duration: 25s;
 }
 
+/* Updated Testimonials Section for Manual Scroll */
 .testimonials-section {
     padding: 8rem 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -1883,6 +1944,7 @@ html {
     display: flex;
     align-items: center;
     gap: 1rem;
+    justify-content: center;
 }
 
 .testimonials-row-header h3 {
@@ -1893,17 +1955,29 @@ html {
     letter-spacing: 0.5px;
 }
 
-.testimonials-grid {
-    display: flex;
-    gap: 2rem;
-    padding: 1rem 0 3rem 0;
-    overflow: hidden;
-    scroll-behavior: smooth;
+.testimonials-wrapper {
     position: relative;
+    margin-bottom: 4rem;
+}
+
+.testimonials-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 2rem;
+    padding: 1rem 0 2rem 0;
+}
+
+.testimonials-container::-webkit-scrollbar {
+    display: none;
 }
 
 .testimonial-card {
-    flex: 0 0 300px;
+    flex: 0 0 350px;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 25px;
     padding: 3rem;
@@ -1911,8 +1985,11 @@ html {
     border: 2px solid rgba(8, 113, 189, 0.1);
     position: relative;
     transition: all 0.4s ease;
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .testimonial-card::before {
@@ -1959,6 +2036,12 @@ html {
     justify-content: center;
 }
 
+.testimonial-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .testimonial-content p {
     color: #333;
     font-size: 1.15rem;
@@ -1966,6 +2049,7 @@ html {
     margin-bottom: 2.5rem;
     font-style: italic;
     text-align: center;
+    flex: 1;
 }
 
 .customer-info {
@@ -2023,6 +2107,14 @@ html {
     text-transform: uppercase;
 }
 
+/* Navigation for testimonials */
+.testimonials-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -2033,9 +2125,6 @@ html {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
 }
-
-
-
 
 .vendor-section {
     padding: 8rem 0;
@@ -2828,7 +2917,6 @@ html {
         opacity: 0;
         transform: scale(0.8) translateY(50px);
     }
-
     to {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -3129,24 +3217,18 @@ html {
 }
 
 @keyframes float {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0px);
     }
-
     50% {
         transform: translateY(-20px);
     }
 }
 
 @keyframes floatCard {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0px) scale(1);
     }
-
     50% {
         transform: translateY(-15px) scale(1.05);
     }
@@ -3156,7 +3238,6 @@ html {
     from {
         opacity: 0.5;
     }
-
     to {
         opacity: 1;
     }
@@ -3167,7 +3248,6 @@ html {
         transform: scale(1);
         opacity: 1;
     }
-
     100% {
         transform: scale(1.4);
         opacity: 0;
@@ -3178,7 +3258,6 @@ html {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
@@ -3188,11 +3267,9 @@ html {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
@@ -3207,7 +3284,6 @@ html {
         transform: translateY(-100px);
         opacity: 0;
     }
-
     to {
         transform: translateY(0px);
         opacity: 1;
@@ -3223,7 +3299,6 @@ html {
         transform: translateY(40px);
         opacity: 0;
     }
-
     to {
         transform: translateY(0);
         opacity: 1;
@@ -3261,7 +3336,6 @@ html {
         transform: scale(0);
         opacity: 1;
     }
-
     to {
         transform: scale(2);
         opacity: 0;
@@ -3281,6 +3355,7 @@ img.loaded {
     opacity: 1;
 }
 
+/* Mobile Responsive Design */
 @media (max-width: 1200px) {
     .hero-content {
         max-width: 100%;
@@ -3300,7 +3375,11 @@ img.loaded {
     }
 
     .service-card {
-        flex: 0 0 calc((100% - 2rem) / 2);
+        flex: 0 0 320px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 320px;
     }
 }
 
@@ -3360,7 +3439,11 @@ img.loaded {
     }
 
     .service-card {
-        flex: 0 0 calc(100% - 2rem);
+        flex: 0 0 300px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 300px;
     }
 }
 
@@ -3515,18 +3598,33 @@ img.loaded {
         padding: 2rem;
     }
 
-    .services-grid {
-        padding: 0 1rem;
+    /* Mobile Services Scroll */
+    .services-container {
+        padding: 1rem 1rem 2rem 1rem;
     }
 
     .service-card {
         flex: 0 0 280px;
-        margin-right: 1rem;
+        height: 500px;
+    }
+
+    .service-content {
+        padding: 2rem;
+    }
+
+    /* Mobile Testimonials Scroll */
+    .testimonials-container {
+        padding: 1rem 1rem 2rem 1rem;
     }
 
     .testimonial-card {
-        flex: 0 0 90%;
+        flex: 0 0 280px;
+        height: 400px;
         padding: 2rem;
+    }
+
+    .testimonial-content p {
+        font-size: 1rem;
     }
 
     .vendor-text h2 {
@@ -3552,6 +3650,33 @@ img.loaded {
     .popup-content {
         padding: 2rem;
         width: 95%;
+    }
+
+    /* Navigation buttons on mobile */
+    .services-nav,
+    .testimonials-nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .nav-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .scroll-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .scroll-dot {
+        width: 10px;
+        height: 10px;
     }
 }
 
@@ -3617,7 +3742,14 @@ img.loaded {
     }
 
     .service-card {
-        flex: 0 0 260px;
+        flex: 0 0 250px;
+        height: 450px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 250px;
+        height: 380px;
+        padding: 1.5rem;
     }
 
     .app-badges {
@@ -3629,8 +3761,8 @@ img.loaded {
     }
 }
 
+/* Touch and Swipe Interactions */
 @media (hover: none) and (pointer: coarse) {
-
     .service-card:hover,
     .step-card:hover,
     .testimonial-card:hover {
@@ -3645,6 +3777,36 @@ img.loaded {
     .contact-form textarea {
         min-height: 48px;
     }
+
+    /* Enhanced touch targets for mobile */
+    .nav-btn {
+        min-width: 48px;
+        min-height: 48px;
+        touch-action: manipulation;
+    }
+
+    .scroll-dot {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+    }
+
+    .scroll-dot::before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(8, 113, 189, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .scroll-dot.active::before {
+        background: #0871bd;
+        transform: scale(1.2);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3652,5 +3814,54 @@ img.loaded {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-color-scheme: dark) {
+    .service-card,
+    .testimonial-card,
+    .contact-card {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .service-card:hover,
+    .testimonial-card:hover {
+        border-width: 3px;
+    }
+    
+    .nav-btn:focus,
+    .scroll-dot:focus {
+        outline: 3px solid #fba208;
+        outline-offset: 2px;
+    }
+}
+
+/* Custom scrollbar for services and testimonials on desktop */
+@media (min-width: 1025px) {
+    .services-container::-webkit-scrollbar,
+    .testimonials-container::-webkit-scrollbar {
+        height: 8px;
+        display: block;
+    }
+    
+    .services-container::-webkit-scrollbar-track,
+    .testimonials-container::-webkit-scrollbar-track {
+        background: rgba(8, 113, 189, 0.1);
+        border-radius: 4px;
+    }
+    
+    .services-container::-webkit-scrollbar-thumb,
+    .testimonials-container::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #0871bd, #fba208);
+        border-radius: 4px;
+    }
+    
+    .services-container::-webkit-scrollbar-thumb:hover,
+    .testimonials-container::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #fba208, #ff8c00);
     }
 }
