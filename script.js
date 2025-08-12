@@ -345,7 +345,7 @@ class ManualCarousel {
     this.cardSelector = cardSelector;
     this.navSelector = navSelector;
     this.indicatorSelector = indicatorSelector;
-    
+
     this.init();
   }
 
@@ -359,12 +359,12 @@ class ManualCarousel {
   setupContainer() {
     // Wrap existing cards in a container
     const existingCards = Array.from(this.container.querySelectorAll(this.cardSelector));
-    
+
     if (existingCards.length === 0) return;
 
     const scrollContainer = document.createElement('div');
     scrollContainer.className = this.container.classList.contains('testimonials-grid') ? 'testimonials-container' : 'services-container';
-    
+
     // Move all cards to the scroll container
     existingCards.forEach(card => {
       scrollContainer.appendChild(card);
@@ -426,7 +426,7 @@ class ManualCarousel {
       dot.className = 'scroll-dot';
       dot.setAttribute('aria-label', `Go to page ${i + 1}`);
       if (i === 0) dot.classList.add('active');
-      
+
       dot.addEventListener('click', () => this.scrollToPage(i));
       indicatorContainer.appendChild(dot);
     }
@@ -478,10 +478,10 @@ class ManualCarousel {
 
     this.scrollContainer.addEventListener('touchmove', (e) => {
       if (!touchStartX) return;
-      
+
       const touchX = e.touches[0].clientX;
       const diff = touchStartX - touchX;
-      
+
       this.scrollContainer.scrollLeft += diff;
       touchStartX = touchX;
     }, { passive: true });
@@ -496,7 +496,7 @@ class ManualCarousel {
   getCardWidth() {
     const card = this.scrollContainer.querySelector(this.cardSelector);
     if (!card) return 280;
-    
+
     const cardRect = card.getBoundingClientRect();
     const gap = 30; // Gap between cards
     return cardRect.width + gap;
@@ -506,7 +506,7 @@ class ManualCarousel {
     const cardWidth = this.getCardWidth();
     const visibleCards = this.getVisibleCardCount();
     const scrollAmount = cardWidth * visibleCards;
-    
+
     this.scrollContainer.scrollBy({
       left: -scrollAmount,
       behavior: 'smooth'
@@ -517,7 +517,7 @@ class ManualCarousel {
     const cardWidth = this.getCardWidth();
     const visibleCards = this.getVisibleCardCount();
     const scrollAmount = cardWidth * visibleCards;
-    
+
     this.scrollContainer.scrollBy({
       left: scrollAmount,
       behavior: 'smooth'
@@ -528,7 +528,7 @@ class ManualCarousel {
     const cardWidth = this.getCardWidth();
     const visibleCards = this.getVisibleCardCount();
     const scrollAmount = cardWidth * visibleCards * pageIndex;
-    
+
     this.scrollContainer.scrollTo({
       left: scrollAmount,
       behavior: 'smooth'
@@ -539,7 +539,7 @@ class ManualCarousel {
     if (!prevBtn || !nextBtn) return;
 
     const isAtStart = this.scrollContainer.scrollLeft <= 5;
-    const isAtEnd = this.scrollContainer.scrollLeft >= 
+    const isAtEnd = this.scrollContainer.scrollLeft >=
       this.scrollContainer.scrollWidth - this.scrollContainer.clientWidth - 5;
 
     prevBtn.disabled = isAtStart;
@@ -572,7 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Customer Services Carousel
   new ManualCarousel(
-    '.customer-services', 
+    '.customer-services',
     '.service-card',
     '.services-nav',
     '.scroll-indicators'
@@ -589,7 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Customer Testimonials Carousel
   new ManualCarousel(
     '.customer-grid',
-    '.testimonial-card', 
+    '.testimonial-card',
     '.testimonials-nav',
     '.scroll-indicators'
   );
@@ -750,7 +750,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
     const focusedElement = document.activeElement;
     const carousel = focusedElement.closest('.services-container, .testimonials-container');
-    
+
     if (carousel) {
       e.preventDefault();
       const cardWidth = carousel.querySelector('.service-card, .testimonial-card')?.offsetWidth + 30 || 310;
