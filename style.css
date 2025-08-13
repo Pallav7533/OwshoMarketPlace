@@ -3522,7 +3522,7 @@ img.loaded {
   }
 
   .nav-right {
-    margin-top: 0;
+    margin-top: 1.2rem;
     margin-left: auto;
     gap: 0.8rem;
   }
