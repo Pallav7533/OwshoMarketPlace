@@ -3461,6 +3461,7 @@ img.loaded {
   .showcase-phones {
     order: -1;
     height: 350px;
+    padding-top: 60px; 
   }
 
   /* Category Header */
