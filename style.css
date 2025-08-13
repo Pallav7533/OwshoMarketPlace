@@ -3433,6 +3433,7 @@ img.loaded {
     width: 280px;
     height: 540px;
     right: 0;
+    margin-top: 50px;
   }
 
   .hero-text h1 {
@@ -3586,7 +3587,7 @@ img.loaded {
   .hero-phone-mockup {
     width: 240px;
     height: 480px;
-    margin: 0 auto;
+    margin: 50px auto 0;
   }
 
   /* Hide floating cards on mobile */
@@ -3798,6 +3799,7 @@ img.loaded {
   .hero-phone-mockup {
     width: 200px;
     height: 400px;
+    margin: 60px auto 0;
   }
 
   /* Stats */
