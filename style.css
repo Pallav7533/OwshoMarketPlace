@@ -1256,10 +1256,12 @@ html {
 
 /* How It Works Section */
 .how-it-works-section {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background: linear-gradient(135deg, #f8f9fa, #ffffff);
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
+  margin-top: -0.5rem;   /* upar kheech liya */
+  z-index: 5;          /* overlap dikhane ke liye */
 }
 
 .how-it-works-section::before {
@@ -1482,9 +1484,12 @@ html {
 
 /* Services Section */
 .services-section {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   position: relative;
+  margin-top: -3.5rem;   /* upar kheech liya */
+  z-index: 5;          /* overlap dikhane ke liye */
+  overflow: hidden;
 }
 
 .services-section::before {
