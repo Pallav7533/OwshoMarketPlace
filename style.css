@@ -655,6 +655,8 @@ html {
   padding: 4rem 2rem;
   position: relative;
   z-index: 3;
+  margin-top: -40px;
+  margin-bottom: -1.5rem;
 }
 
 .about-owsho-container {
@@ -965,12 +967,12 @@ html {
 /* App Showcase Section */
 .app-showcase-section {
   position: relative;
-  padding: 5rem 0;
+  padding: 4rem 0;
   background: linear-gradient(135deg, #0871bd 0%, #0a5a94 100%);
   overflow: hidden;
-  margin-top: -2rem;
+  margin-top: -3rem;   /* upar kheech liya */
+  z-index: 5;          /* overlap dikhane ke liye */
 }
-
 .showcase-container {
   max-width: 1200px;
   margin: 0 auto;
