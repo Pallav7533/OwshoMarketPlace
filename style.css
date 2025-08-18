@@ -970,9 +970,12 @@ html {
   padding: 4rem 0;
   background: linear-gradient(135deg, #0871bd 0%, #0a5a94 100%);
   overflow: hidden;
-  margin-top: -3rem;   /* upar kheech liya */
-  z-index: 5;          /* overlap dikhane ke liye */
+  margin-top: -3rem;
+  /* upar kheech liya */
+  z-index: 5;
+  /* overlap dikhane ke liye */
 }
+
 .showcase-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1260,8 +1263,10 @@ html {
   background: linear-gradient(135deg, #f8f9fa, #ffffff);
   overflow: hidden;
   position: relative;
-  margin-top: -0.5rem;   /* upar kheech liya */
-  z-index: 5;          /* overlap dikhane ke liye */
+  margin-top: -0.5rem;
+  /* upar kheech liya */
+  z-index: 5;
+  /* overlap dikhane ke liye */
 }
 
 .how-it-works-section::before {
@@ -1487,8 +1492,10 @@ html {
   padding: 4rem 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   position: relative;
-  margin-top: -3.5rem;   /* upar kheech liya */
-  z-index: 5;          /* overlap dikhane ke liye */
+  margin-top: -3.5rem;
+  /* upar kheech liya */
+  z-index: 5;
+  /* overlap dikhane ke liye */
   overflow: hidden;
 }
 
@@ -2876,14 +2883,15 @@ html {
 }
 
 .company-link {
-  color: inherit; /* footer का original color */
+  color: inherit;
+  /* footer का original color */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .company-link:hover {
-  color:linear-gradient(135deg, #0871bd, #fba208);
+  color: linear-gradient(135deg, #0871bd, #fba208);
   text-shadow: 0 0 8px rgba(255, 152, 0, 0.7);
 }
 
